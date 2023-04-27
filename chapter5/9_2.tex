@@ -1,0 +1,227 @@
+\documentclass{report}
+
+\input{~/latex/template/preamble.tex}
+\input{~/latex/template/macros.tex}
+
+\title{\Huge{9.2 Notes}}
+\author{\huge{Matt Warner}}
+\date{\huge{}}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Chapter 9.2 - The Parabola}
+\lhead{\leftmark}
+\cfoot{\thepage}
+% \usepackage[default]{sourcecodepro}
+% \usepackage[T1]{fontenc}
+
+\usepackage{pgfplots}
+\usepackage{tikz}
+\pgfplotsset{compat=1.18}
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+\begin{document}
+	\maketitle
+	
+
+\begin{LARGE}
+	\begin{center}
+		\textbf{THE PARABOLA} 
+	\end{center}
+\end{LARGE}
+\bigbreak \noindent
+\begin{large}
+
+\noindent A \textbf{parabola} is the set of all points in a plane equidistant from a fixed point $F$ (the \textbf{focus} and a fixed line $l$ (th \textbf{directrix} that lie in the plane.
+\vspace{5mm}
+
+\noindent The \textbf{axis} of the parabola is the line through $F$ that is perpendicular to the directrix.
+\vspace{5mm}
+
+\noindent The \textbf{vertex} of the parabola is the point $V$ on the axis halfway from $F$ to $l$.
+
+\end{large}
+\bigbreak \noindent
+
+\begin{center}
+\begin{align*}
+&\text { Parabola with Vertex } V(h, k)\\
+&\begin{array}{|l|l|l|}
+\hline \multicolumn{1}{|c|}{\begin{array}{l}
+\text { Standard equation, focus, } \\
+\text { directrix }
+\end{array}} & \text { Graph for } p>0 & \text { Graph for } p<0 \\
+\hline \quad(x-h)^2=4 p(y-k) & & \\
+\begin{array}{l}
+\text { Focus: } F(h, k+p) \\
+\text { Directrix: } y=k-p \\
+\text { Length of latus rectum: } 4 p
+\end{array} & & \\
+\hline(y-k)^2=4 p(x-h) & & \\
+\text { Focus: } F(h+p, k) \\
+\text { Directrix: } x=h-p \\
+\text { Length of latus rectum: } 4 p & & \\
+\hline
+\end{array}
+\end{align*}
+\end{center}
+
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+	\textbf{Ex 1}
+	Sketch the graph of the following functions. Find the vertex, focus, and directrix
+\end{large}
+\bigbreak \noindent
+
+$$
+\begin{array}{|c|c|c|c|}
+\hline \text { Vertex } & \text { Focus } & \text { Directrix } & \text { Equation } \\
+\hline(0,0) & (a, 0) & x=-a & y^2=4 a x \\
+\hline(0,0) & (-a, 0) & x=a & y^2=-4 a x \\
+\hline(0,0) & (0, a) & y=-a & x^2=4 a y \\
+\hline(0,0) & (0,-a) & y=a & x^2=-4 a y \\
+\hline
+\end{array}
+$$
+\bigbreak \noindent \bigbreak \noindent
+
+\begin{large}
+\noindent a) $x^2 = -3y$ 
+\end{large}
+\vspace{3mm}
+
+$$4p = -3$$
+$$p = \frac{-3}{4}$$
+Vertex: $(0,0)$, 
+\vspace{2mm}
+\noindent Focus: $(0, \frac{-3}{4})$
+\begin{center}
+		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[restrict y to domain=-10:10, restrict x to domain=-10:10,samples=200, xmin=-10, xmax=10, ymin=-10, ymax=10, axis lines=middle]
+					\addplot[color=red] {-(1/3)*x^2};
+				\end{axis} 
+			\end{tikzpicture}
+		\end{center}
+\end{center}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+	b) $\left(y+1\right) = -12\left(x+2\right)$ 
+
+\end{large}
+
+\begin{center}
+Vertex = $(-2,-1)$
+\vspace{2mm}
+
+$4p = -12$  $\rightarrow$ focal width = 12 $\rightarrow$ split in half: 6
+\vspace{2mm}
+
+$p = -3$
+\vspace{2mm}
+
+Focus: $(-5,-1)$ $\rightarrow$ (The focus is p, or -3 away from the vertex.) (x-axis)
+\vspace{2mm}
+
+Focus: $(-5,5)$ $\rightarrow$ (This focus is 6 units from our vertex) (y-axis)
+\vspace{2mm}
+
+Thus,
+\bigbreak \noindent \bigbreak \noindent \bigbreak \noindent
+
+\begin{tikzpicture}
+\begin{axis}[
+  axis lines=middle,
+  xlabel=$x$,
+  ylabel=$y$,
+  xmin=-5, xmax=5,
+  ymin=-8, ymax=5,
+  domain=-10:2,
+  samples=100
+  ]
+  \addplot [blue, thick] {sqrt(-12*(x+2))-1};
+  \addplot [blue, thick] {-sqrt(-12*(x+2))-1};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+	\textbf{Ex 2:}
+	Find the equation of the parabola that satisfies the given conditions.
+\end{large}
+\bigbreak \noindent \bigbreak \noindent \bigbreak \noindent
+\begin{large}
+ a) Focus $F$$(-3,-2)$, directrix $y=1$ 
+\end{large}
+\vspace{3mm}
+
+\begin{center}
+Vertex: $(-3,\frac{-1}{2})$
+\vspace{2mm}
+
+$(x+3)^2 = 4p(y+\frac{1}{2})$
+\vspace{2mm}
+
+$(x+3)^2=4(-1.5)\left(y+\frac{1}{2}\right)$
+\vspace{2mm}
+
+$(x+3)^2=-6\left(y+\frac{1}{2}\right)$
+\end{center}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+b) Vertex $V(3,-2)$, axis (axis of symmetry) parallel  to the x-axis, and y-intercept 1.
+\vspace{2mm}
+
+
+\end{large}
+\bigbreak \noindent
+\begin{center}
+ $h = 3$ 
+ \vspace{2mm}
+
+ $k =-2$ 
+ \vspace{2mm}
+ 
+$(y-k)^2=4 p(x-h)$
+\vspace{2mm}
+
+$(y+2)^2=4 p(x-3)$
+\vspace{2mm}
+
+$(1+2)^2=4 p(0-3)$
+\vspace{2mm}
+
+$-3 = 4p$
+\vspace{2mm}
+
+\boxed{$(y+2)^2=-3(x-3)$}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\end{document}

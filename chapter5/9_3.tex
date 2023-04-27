@@ -1,0 +1,184 @@
+\documentclass{report}
+
+\input{~/latex/template/preamble.tex}
+\input{~/latex/template/macros.tex}
+
+\title{\Huge{Section 9.3 Notes}}
+\author{\huge{Matt Warner}}
+\date{\huge{}}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Chapter 9 Section 3 Notes}
+\lhead{\leftmark}
+\cfoot{\thepage}
+% \usepackage[default]{sourcecodepro}
+% \usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\graphicspath{ {/home/mattwarner/school/pictures/} }
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+\begin{document}
+	\maketitle
+\begin{LARGE}
+	\begin{center}
+		\textbf{9.3 THE ELLIPSE}
+	\end{center}
+\end{LARGE}
+\bigbreak \noindent \bigbreak \noindent
+
+\begin{large}
+	\noindent \textbf{\underline{Definition}}
+\end{large}
+\bigbreak
+\noindent An \textbf{ellipse} is the set of all points in a plane, the sum of whose distances from two fixed points (the \textbf{foci}) in the plane is a positive constant. The foci are a distance $c$ from the center, where $c^2=a^2-b^2$.
+\vspace{5mm}
+
+\noindent The \textbf{major axis} of the ellipse is the longest line segment passing through the center and foci. The end points of the major axis are called the vertices of the ellipse. Vertices are a distance of $a$ from the center.
+\vspace{5mm}
+
+\noindent The \textbf{minor axis} of the ellipse is the shortest line segment passing through the center. \\ The length of the major axis is $2a$, and the length of the minor axis is $2b$.
+\bigbreak \bigbreak
+\begin{center}
+{Standard Equation of an ellipse with center $(h, k)$ and $c^2=a^2-b^2$}
+\end{center}
+\begin{center}
+  
+\begin{tabular}{|l|l|}
+\hline Standard equation, foci, vertices & Standard equation, foci, vertices \\
+\hline$\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1$ where $a>b>0$ & $\frac{(x-h)^2}{b^2}+\frac{(y-k)^2}{a^2}=1$ where $a>b>0$ \\
+$\begin{array}{l}\text { Major axis: parallel to the } x \text {-axis } \\
+\text { Foci: } F(h \pm c, k) \\
+\text { Vertices: }(h \pm a, k)\end{array}$ & $\begin{array}{l}\text { Major axis: parallel to the } y \text {-axis } \\
+\text { Foci: } F(h, k \pm c) \\
+\text { Vertices: }(h, k \pm a)\end{array}$ \\
+\hline
+\end{tabular}
+\end{center}
+\bigbreak \noindent \bigbreak \noindent
+\vspace{7mm}
+
+\begin{large}
+	\noindent \textbf{Example 1:}  
+	Sketch the graph of the functions. Find the vertices and foci.
+\end{large}
+\bigbreak
+\vspace{3mm}
+
+\begin{large}
+\noindent a) $y^2 +9x^2 = 9$ 
+\end{large}
+\vspace{3mm}
+\begin{center}
+	$$\frac{y^2+9x^2}{9}=\frac{9}{9}$$
+$$x^2+\left(\frac{y}{3}\right)^2 = 1$$
+
+ Center: $(0,0)$
+
+ $a=3$
+
+ $b=1$
+\vspace{3mm}
+
+ \nt{a is always larger than $b$, so $a=3$}
+ \vspace{2mm}
+
+Now, we use the formula, $c^2 = a^2 - b^2$ to find c. 
+so, $c=\sqrt{8} \rightarrow 2\sqrt{2}$
+\vspace{2mm}
+
+	vertices = $(0, \pm{3})$
+	\vspace{2mm}
+
+	Foci = $(0,\pm2\sqrt{2})$
+
+\end{center}
+
+\vspace{5mm}
+\hline 
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+	b) $\frac{(x+3)^2}{9}+\frac{(y-2)^2}{4}=1$
+\end{large}
+\bigbreak 
+Center = (-3,2)
+\vspace{2mm}
+
+ $a =3$
+\vspace{2mm}
+
+ $b=2$
+
+ $$c^2=3^2-2^2 \rightarrow c=\sqrt{5}$$
+ \vspace{3mm}
+
+ \begin{center}
+   
+\includegraphics[scale=.7] {graph1}
+ \end{center}
+\vspace{3mm}
+
+\noindent As you can see in the figure, the center is located at $(-3,2)$, and we can create the ellipse by addding $\pm{2}$ to the y-axis at the center, and adding $\pm{-3}$ to the x-axis at our center point. (These are our $a$ and $b$ values.)
+\vspace{2mm}
+
+Thus, The vertices are listed as $\rightarrow$ $ (-6,2), (0,2)$
+\vspace{2mm}
+
+Foci = $(-3\pm{\sqrt{5}}, 2)$, (x-value in the center point $\pm{c}$, y-value of the center point.)
+\bigbreak \noindent \bigbreak \noindent
+\noindent
+\begin{large}
+ c) $9 x^2+4 y^2-18 x+16 y-11=0$
+\end{large}
+\vspace{5mm}
+
+\vspace{3mm}
+\nt{Compleating the Sqaure: \\ $\left(\frac{b}{2}\right)^2$ = new value for c in the equation}
+\vspace{3mm}
+
+$$
+9\left(x^2-2 x+1\right)+4\left(y^2+4 y+4\right)=11+9+16
+$$
+$$
+\frac{(x-1)^2}{36}+\frac{4(y+2)^2}{36}=\frac{36}{36}
+$$
+$$
+\frac{(x-1)^2}{4}+\frac{(y+2)^2}{9}=1
+$$
+\vspace{4mm}
+
+Center = $(1,-2)$
+
+$a = 3$
+
+$b = 2$
+
+$c = \sqrt{5}$
+
+
+
+
+
+
+
+\end{document}
