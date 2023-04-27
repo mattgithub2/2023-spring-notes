@@ -1,0 +1,224 @@
+\documentclass{report}
+
+\input{~/latex/template/preamble.tex}
+\input{~/latex/template/macros.tex}
+
+\title{\Huge{Chapter 4.1 Notes}}
+\author{\huge{Matt Warner}}
+\date{\huge{}}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{SECTION 4.1}
+\lhead{\leftmark}
+\cfoot{\thepage}
+% \usepackage[default]{sourcecodepro}
+% \usepackage[T1]{fontenc}
+
+%\usepackage{pgfplots}
+%\pgfplotsset{compat=1.18}
+
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+\begin{document}
+\maketitle
+\begin{Large}
+	\noindent \textbf{COMPOSITE FUNCTIONS:}
+\end{Large}	
+\bigbreak \noindent \bigbreak \noindent
+\dfn{}{
+Given two functions $f$ and $g$ the composite function, denoted by $f \circ g$ (read as ''$f$ composed with $g$``), is defined by $f \circ g = f(g(x))$
+}
+\bigbreak
+\noindent \nt{The Domain of $f \circ g$ is the set of all numbers x in the domain of $g$ such that $g(x)$ is in the domain of $f$.}
+\bigbreak \noindent
+\begin{mdframed}
+	\begin{center}
+
+		\textbf{Example 1 - Find: a. $f \circ g(4)$ b. $g \circ f(2)$ c. $f \circ f(1)$ d. $g \circ g(0)$}
+
+	\end{center}
+\end{mdframed}
+
+\bigbreak
+\begin{center}
+\noindent {1) $f(x) = \sqrt{x+1}$ and $g(x)=3x$}
+\end{center}
+\bigbreak
+\pf{solution}
+\noindent a) $f(g(4)) = \sqrt{13}$
+\bigbreak
+b) $g(f(2)) = 3\sqrt{3}$
+\bigbreak
+c) $f(f(1)) = \sqrt{\sqrt{2} +1}$
+\bigbreak
+d) $g(g(0)) = 0$
+\bigbreak
+\begin{center}
+	2) $ f(x) = | x-2 |$ and $g(x) = \frac{3}{x^2+4}$
+  
+\end{center}
+\bigbreak
+\pf{Solution}
+
+a) $ f(g(4)) = \frac{37}{20}$
+\bigbreak
+b) $g(f(2)) = \frac{3}{4}$
+\bigbreak
+c) $f(f(1)) = 1$
+\bigbreak
+d) $g(g(0)) = \frac{48}{73}$
+\bigbreak \noindent \bigbreak \noindent
+\begin{mdframed}
+	\begin{center}
+		\textbf{Example 2: Find the domain of the composite function $f \circ g$}
+	  
+	\end{center}
+  
+\end{mdframed}
+\nt{when finding the domain of f(g(x)), you include the restrictions for g(x) and any new restrictions in $ f \circ g$}
+\qs{}{
+	$$f(x) = \frac{x}{x+3}$$
+	$$g(x) = \frac{2}{x}$$
+}
+  
+\bigbreak
+\pf{Solution ($f \circ g$)}
+
+\bigbreak
+\textit{domain of $g(x)$: $x \neq{0}$}
+\bigbreak
+$f \circ g$ : $\frac{\frac{2}{x}}{\frac{2}{x}+3}$ $\rightarrow$ $\frac{2}{2+3x}$
+\bigbreak
+\textit{domain of $f(g(x))$: $x \neq{-\frac{2}{3}}$}
+\bigbreak
+\textbf{so,} domain: $\{x\neq{0},x\neq{-\frac{2}{3}}$\}
+\bigbreak \bigbreak
+\qs{}{
+	$$f(x)=x^{2}+4$$ 
+	$$g(x)=\sqrt{x-2}$$
+}
+\pf{solution ($f \circ g$)}
+
+\bigbreak
+\textit{Domain of g(x): $ x | x \ge 2$}
+\bigbreak
+$f(\sqrt{x-2}) = (\sqrt{x-2})^2+4$
+\bigbreak
+$ x-2+4$ $\rightarrow$ $x+2$ (we can ignore this)
+\bigbreak
+\textbf{so,} Domain: $ \{x | x \ge 2$\}
+\bigbreak \noindent \bigbreak \noindent
+\begin{mdframed}
+ \begin{center}
+	 \textbf{Example 3. Find: i. $f \circ g$ ii. $g \circ f$ iii. $f \circ f$ iv. $g \circ g$}
+ \end{center} 
+\end{mdframed}
+\begin{large}
+	\begin{center}
+\textbf{For the given functions $f$ and $g$. State the domain of each composite function.} 
+	\end{center}
+\end{large}
+\qs{}{
+	$$f(x)=x^2+1$$
+	$$g(x)=2x^2+3$$
+}
+\pf{Solution i. ($f\circ g$)}
+\bigbreak
+
+Domain of $g(x)$ $\rightarrow$ $D:\mathbb{R}$
+\bigbreak
+$f(2x^2+3) = (2x^3+3)^2 + 1$
+\bigbreak
+$\rightarrow$ $4x^4+12x^2+10$ (No restrictions in domain)
+\bigbreak
+\textbf{So,} $D:\mathbb{R}$
+\bigbreak
+\pf{Solution ii. ($g \circ f$)}
+\bigbreak
+
+Domain of $f(x)$ $\rightarrow$ $D:\mathbb{R}$
+\bigbreak
+$g(x^2+1) = 2(x^2+1)^2+3$
+\bigbreak
+= $2(x^4+2x^2+1)+3$
+\bigbreak
+= $2x^4+4x^2+5$ (No restrictions in domain)
+\bigbreak
+\textbf{So,} $D:\mathbb{R}$
+\bigbreak
+\pf{Solution iii. ($f \circ f$)}
+\bigbreak
+
+Domain of $f(x)$ $\rightarrow$ $D:\mathbb{R}$
+\bigbreak
+$f(x^2+1) = (x^2+1)^2+1$
+\bigbreak
+= $x^4+2x^2+1$ (No restrictions in Domain)
+\bigbreak
+\textbf{So,} $D:\mathbb{R}$
+\pf{Solution iv. ($ g \circ g$)}
+\bigbreak
+Domain of $g(x)$ $\rightarrow$ $D:\mathbb{R}$
+\bigbreak
+$g(2x^2+3) = 2(2x^2+3)^2+3$
+\bigbreak
+= $8x^4+24x^2+21$ (no domain restrictions)
+\bigbreak
+\textbf{So,} $D:\mathbb{R}$
+\bigbreak \bigbreak
+\qs{}{
+	$$f(x)=\sqrt{x-2}$$
+	$$g(x)=1-2x$$
+}
+\pf{Solution i. ($f \circ g$)}
+\bigbreak
+Domain of $g(x)$ $\rightarrow$ $D:\mathbb{R}$
+\bigbreak
+$f(1-2x) = \sqrt{1-2x-2}$ $\rightarrow$ $\sqrt{-2x-1}$
+\bigbreak
+$\sqrt{-2x-1} \ge 0$
+\bigbreak
+$-2x-1 \ge 0$ $\rightarrow$ $-2x \ge 1$
+\bigbreak
+$x \le -\frac{1}{2}$
+\bigbreak
+\textbf{So,} $D:\{x | x \le -\frac{1}{2}\}$
+\bigbreak
+\pf{Solution ii. ($g \circ f$)}
+\bigbreak
+
+Domain of $f(x)$ $\rightarrow$ $ D:\{x | x \ge 2\}$
+\bigbreak
+$g(\sqrt{x-2}) = 1-2\sqrt{x-2}$
+\bigbreak
+\textbf{So,} $D: \{x | x \ge 2\}$
+\bigbreak
+
+	
+
+
+
+
+
+\end{document}
+	
+

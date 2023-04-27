@@ -1,0 +1,281 @@
+\documentclass{report}
+
+\input{~/latex/template/preamble.tex}
+\input{~/latex/template/macros.tex}
+
+\title{\Huge{Section 4.4 Notes}}
+\author{\huge{Matt Warner}}
+\date{\huge{}}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Section 4.4: Logarithmic Functions}
+\lhead{\leftmark}
+\cfoot{\thepage}
+% \usepackage[default]{sourcecodepro}
+% \usepackage[T1]{fontenc}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{arrows}
+
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+\begin{document}
+	\maketitle	
+
+
+\begin{huge}
+ \begin{center}
+	 \textbf{Logarithmic Functions}
+ \end{center} 
+\end{huge}
+\bigbreak \noindent \bigbreak \noindent
+\begin{LARGE}
+	\textbf{Recall:}
+\end{LARGE}
+\begin{large}
+ \begin{enumerate}
+	 \item Exponential functions are one-to-one with H.A. $y=0$ 
+	 \item One-to-one functions have inverse functions
+ \end{enumerate} 
+
+ \nt{The inverse of exponential functions is the logarithmic function.}
+\end{large}
+\bigbreak \noindent \bigbreak \noindent
+\dfn{}{
+Leta be a positive real number different from 1. The logarithm of $\mathbf{x}$ with base a is defined by $\log _a x=y$ if and only if $x=a^y$ for every $x>0$ and every real number $y$. 
+}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+	\textbf{Example 1:}
+	Change to logarithmic form
+\end{large}
+
+\bigbreak \noindent 
+\begin{large}
+a) $3^{-4}=\frac{1}{81}$
+\end{large}
+\pf{Soultion}
+
+$$
+\log _3 \frac{1}{81}=-4
+$$
+
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+b) $(0.9)^t=\frac{1}{2}$
+\end{large}
+
+\pf{Solution}
+
+$$
+\log _{0.9} \frac{1}{2}=t
+$$
+\bigbreak \noindent \bigbreak \noindent
+
+\begin{large}
+	\noindent \textbf{Example 2:} 
+	Change to exponential form
+\end{large}
+\bigbreak \noindent 
+\begin{large}
+a) $\log _a \frac{1}{256}=-4$
+\end{large}
+
+\pf{Solution}
+
+$$a^{-4} = \frac{1}{256}$$
+\bigbreak \noindent
+\begin{large}
+  b) $\log _a 343=\frac{3}{4}$
+\end{large}
+
+\pf{Solution}
+
+$$a^{\frac{3}{4}}=343$$
+
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+	\textbf{Example 3:}
+	Find the exact value of each logarithm
+\end{large}
+\bigbreak \noindent
+\begin{large}
+  a) $\log _5 \sqrt[3]{25}$
+\end{large}
+
+\pf{Solution}
+
+$$
+5^x=25^{1 / 3}
+$$
+$$
+5^x=\left(5^2\right)^{1 / 3}
+$$
+$$
+5^x=5^{2 / 3}
+$$
+$$ \frac{2}{3} \rightarrow solution$$
+\bigbreak \noindent
+\begin{large}
+b) $\log _{\sqrt{3}} 9$
+\end{large}
+
+\pf{Solution}
+
+$$(\sqrt{3}^3)=9$$
+$$(3^{\frac{1}{2}})^{x}=3^2$$
+$$\frac{1}{2}x = 2$$
+$$x=4$$
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+	\textbf{Example 4:}
+	Find the domain of each function 
+\end{large}
+\bigbreak \noindent
+\begin{large}
+  a) $f(x)=6+4 \log _3(2 x-1)$
+\end{large}
+
+\pf{Solution}
+
+$$2x-1 > 0$$
+$$2x>1$$
+$$x>\frac{1}{2}$$
+
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+  b) $f(x)\log _2\left(\frac{x}{x-1}\right)$
+\end{large}
+
+\pf{Solution}
+
+\noindent $\frac{x}{x-1}>0$
+\begin{center}
+\begin{tikzpicture}
+\draw[latex-latex] (-3.5,0) -- (3.5,0) ; %edit here for the axis
+\foreach \x in  {0,1} % edit here for the vertical lines
+\draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+\foreach \x in {0,1} % edit here for the numbers
+\draw[shift={(\x,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below] 
+{$\x$};
+\end{tikzpicture}
+\end{center}
+$$
+\begin{array}{ccc}
+(-\infty, 0) & (0,1) & (1, \infty) \\
+\frac{(-)}{(-)} & \frac{(+)}{(-)} & \frac{(+)}{(+)}
+\end{array}
+$$ 
+\vspace{5mm}
+
+\noindent Only the Positive Outputs will be included in our Solution set.
+\vspace{3mm}
+
+\noindent So,
+\vspace{3mm}
+
+$D:(-\infty, 0)\cup(1,\infty)$
+
+\pagebreak
+\dfn{}{
+	Common Logarithm: (Logarithm with base 10) $\log x=\log _{10} x$ for every $x>0$
+Natural Logarithm: (Logarithm base e) $\ln x=\log _e x$ for every $x>0$
+}
+\nt{
+Properties of logarithms \\
+1. $\log _a 1=0$ \\
+2. $\log _a a=1$ \\ 
+3. $\log _a a^x=x$ \\
+4. $a^{\log _a x}=x$
+}
+
+\bigbreak \noindent \bigbreak \noindent
+ \begin{large}
+	 \textbf{Example 5:} 
+	 Find the number if possible
+ \end{large} 
+\bigbreak \noindent
+\begin{large}
+  a) $10^{\log 3}$
+\end{large}
+
+\pf{Solution}
+
+$$10^{\log_{10}3}$$
+$$ = 3 $$
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+  b) $\log 0.00001$
+\end{large}
+
+\pf{Solution}
+
+$$\log_{10}10^{-5}$$
+$$=-5$$
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+  c) $\log _5 0$
+\end{large}
+
+\pf{Solution}
+
+\begin{center}
+	Undefined
+\end{center}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+  d) $5^{\log _5 4}$
+\end{large}
+
+\pf{Solution}
+
+  $$5^{\log _5 4} = 4$$
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+  e) $e^{1\ln 5}$
+\end{large}
+
+\pf{Solution}
+
+$$ e^1 \cdot e^{\ln5}$$
+$$e \cdot e^{\log_{e}5}$$
+$$e \cdot 5$$
+$$=5e$$
+
+\pagebreak \noindent
+
+\begin{large}
+	\noindent \textbf{Example 6:} 
+	Find the domain. Sketch the graph. From the graph determine the range and any asymptotes of $f$. Find $f^{-1}$. Graph $f^{-1}$.
+\end{large}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+ a) $f(x)=\log _5(3-x)$ 
+\end{large}
+
+\pf{Solution}
+
+
+\end{document}

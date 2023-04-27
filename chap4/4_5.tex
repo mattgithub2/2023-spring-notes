@@ -1,0 +1,221 @@
+\documentclass{report}
+
+\input{~/latex/template/preamble.tex}
+\input{~/latex/template/macros.tex}
+
+\title{\Huge{Chapter 4.5 Notes}}
+\author{\huge{Matt Warner}}
+\date{\huge{}}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{4.5 PROPERTIES OF LOGARITHMS}
+\lhead{\leftmark}
+\cfoot{\thepage}
+%\usepackage[default]{sourcecodepro}
+%\usepackage[T1]{fontenc}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{graphicx}
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+\begin{document}
+	\maketitle
+\begin{LARGE}
+	\begin{center}
+		\textbf{Properties of Logarithms} 
+	\end{center}
+\end{LARGE}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+	\underline{Laws of Logarithms}
+ \begin{enumerate}
+	 \item $\log _a 1=0$
+	 \item $\log _a a=1$
+	 \item $\log _a a^x=x$
+	 \item $a^{\log _a x}=x$
+	 \item $\log _a(u \cdot w)=\log _a u+\log _a w$
+	 \item $\log _a\left(\frac{u}{w}\right)=\log _a u-\log _a w$
+	 \item $\log _a\left(u^c\right)=c \log _a u$
+ \end{enumerate} 
+\end{large}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+ \begin{center}
+	 \textbf{Change of Base Formula} \\ 
+	If $u > 0$ and if $a$ and $b$ are positive real numbers different from 1, then $\log_{b}u=\frac{\log_{a}u}{\log_{a}b}$
+ \end{center} 
+\end{large}
+\bigbreak \noindent 
+\nt{
+	\begin{itemize}
+		\item $\log _a(u+w) \neq \log _a u+\log _a w$
+		\item $\log _a(u-w) \neq \log _a u-\log _a w$
+	\end{itemize}
+}
+\bigbreak \noindent \bigbreak \noindent
+\begin{mdframed}
+\begin{large}
+  
+	\textbf{Example 1:} 
+
+
+	\noindent Use the properties of logarithms to find the exact value of each expression
+\end{large}
+	\begin{enumerate}
+		\item $2^{\log _2 x}$ 
+		\item $\log_{3}8 \cdot \log_{8}9$
+		\item $e^{\log _{e^2} 9}$
+	\end{enumerate}
+\end{mdframed}
+\bigbreak \noindent
+\bigbreak \noindent
+
+\pf{Soultion to Question 1}
+
+ Using the Laws of logarithms,
+ \bigbreak
+ $2^{\log_{2}x}$ = $x$
+\bigbreak \noindent \bigbreak \noindent
+\pf{Solution to Question 2}
+
+ The change of base formula states that $\log_{3}8 \cdot \log_{8}9$ 
+\bigbreak
+Can be rewritten as: $\frac{\log8}{\log3} \cdot \frac{\log9}{\log8}$
+\bigbreak
+Now,
+\bigbreak
+$\left(\frac{\log 8}{\log 3}\right)\left(\frac{\log 9}{\log 8}\right)$ 
+\bigbreak
+= $\frac{\log9}{\log3}$ 
+\bigbreak \noindent \bigbreak \noindent
+\pf{Soultion to Question 3}
+
+Using the Change of Base Formula,
+\bigbreak
+$e^{\log_{e^2}9}$ = $e^{\frac{\log _e 9}{\log _e e^2}}$
+\bigbreak
+$=e^{\frac{\log _e 9}{2}}$
+\bigbreak
+= $e^{\frac{1}{2} \log _e 9}$
+\bigbreak
+$=e^{\log _e 9^{\frac{1}{2}}}$
+\bigbreak
+Using the Law of exponents, this becomes,
+\bigbreak
+$\sqrt{9}$ which = $3$
+\bigbreak \noindent \bigbreak \noindent
+\begin{mdframed}
+\begin{large}
+	\textbf{Example 2:} \\
+	Express in terms of logarithms of x,y or z.
+\end{large}
+\begin{enumerate}
+	\item  $\log \frac{\sqrt{x}}{y^4 \sqrt[3]{z}}$
+	\item  $\ln x \sqrt{\frac{y^4}{z^5}}$
+	\item  $\log \left[\frac{x^2 \sqrt{x+1}}{(x-2)^2}\right]$
+\end{enumerate}
+\end{mdframed}
+\bigbreak \noindent
+\pf{Solution to Question 1}
+
+$$
+\log \sqrt{x}-\log y^4-\log \sqrt[3]{z}
+$$
+$$
+\log x^{\frac{1}{2}}-\log y^4-\log z^{\frac{1}{3}}
+$$
+$$
+\boxed{\frac{1}{2} \log x-4 \log y-\frac{1}{3} \log z}
+$$
+\bigbreak \noindent
+\pf{Soultion to Question 2}
+
+$$
+\ln \left(x \cdot \frac{y^2}{z^{5 / 2}}\right)
+$$
+$$
+\ln x+\ln y^2-\ln z^{\frac{5}{2}}
+$$
+$$
+\boxed{\ln x+2 \ln y-\frac{5}{2} \ln z}
+$$
+\bigbreak \noindent
+
+\pf{Solution to Question 3}
+
+$$
+\log x^{2}+\log \sqrt{x+1}-\log (x-2)^{{2}}
+$$
+$$
+\boxed{2\log x+\frac{1}{2} \log (x+1)-2 \log (x-2)}
+$$
+\bigbreak \noindent \bigbreak \noindent
+\begin{mdframed}
+ \begin{large}
+	 \textbf{Example 3:} \\
+	 Write the expressions as one logarithm
+ \end{large} 
+ \begin{enumerate}
+	 \item  $5 \log _a x-\frac{1}{2} \log _a(3 x-4)-3 \log _a(5 x+1)$
+	\item $2 \ln x-4 \ln (1 / y)-3 \ln (x y)$
+	\item $\log \left(\frac{x^2+2 x-3}{x^2-4}\right)-\log \left(\frac{x^2+7 x+6}{x+2}\right)$
+ \end{enumerate}
+\end{mdframed}
+\bigbreak \noindent \bigbreak \noindent
+\pf{Solution to Question 1}
+
+$$
+\log_{a}x^{5}-\log _a \sqrt{3 x-4}-\log _a(5 x+1)^3
+$$
+$$
+\boxed{\log _a\left(\frac{x^5}{\sqrt{3 x-4}(5 x+1)^3}\right)}
+$$
+\bigbreak \noindent
+\pf{Solution to Question 2}
+
+$$
+2 \ln x+4 \ln y-3 \ln (x y)
+$$
+$$
+=\ln x^2+\ln y^4-\ln (x y)^3
+$$
+$$
+\ln \left(\frac{x^2 y^4}{x^3 y^3}\right)
+$$
+$$
+\boxed{\ln \left(\frac{y}{x}\right)}
+$$
+\bigbreak \noindent 
+
+\pf{Solution to Question 3}
+
+$$
+\log \left(\frac{\frac{x^2+2 x-3}{x^2-4}}{\frac{x^2+7 x+6}{x+2}}\right)
+$$
+$$
+=\log \left(\frac{(x+3)(x-1)}{(x+2)(x-2)} \cdot \frac{x+2}{(x+6)(x+1)}\right)
+$$
+$$
+\log \left(\frac{(x+3)(x-1)}{(x-2)(x+6)(x+1)}\right)
+$$
+\end{document}

@@ -1,0 +1,125 @@
+\documentclass{report}
+
+\input{~/latex/template/preamble.tex}
+\input{~/latex/template/macros.tex}
+
+\title{\Huge{Chapter 4.2 Notes}}
+\author{\huge{Matt Warner}}
+\date{\huge{}}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{ONE-TO-ONE FUNCTIONS; INVERSE FUNCTIONS}
+\lhead{\leftmark}
+\cfoot{\thepage}
+% \usepackage[default]{sourcecodepro}
+% \usepackage[T1]{fontenc}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+\begin{document}
+\maketitle		
+
+\dfn{}{A function $f$ with domain $D$ and range $R$ is a one-to-one function if either of the following equivalent conditions is satisfied.
+	\begin{enumerate}
+	\item Whenever $a \neq b$ in $D$, then $f(a) \neq f(b) in R.$ 
+	\item Whenever $f(a) = f(b) in R$, then $a = b$ in $D$.
+	\end{enumerate}
+}
+\bigbreak \bigbreak
+\begin{mdframed}
+	\begin{center}
+		\textbf{Example 1}
+		Determine whether the function $f(x) =2x^3-4$ is one-to-one
+	\end{center}
+\end{mdframed}
+\bigbreak
+
+\pf{\large{Solution For Example 1}}{
+	\begin{align*
+		f(a) = f(b) \\
+		2a^3-4 = 2b^3-4 \\
+		2a^3 = 2b^3 \\
+		a^3 = b^3 \\
+		a = b
+	.\end{align*}
+Since $a = b$, the function is one-to-one.
+}
+
+\bigbreak \bigbreak
+\nt{\textbf{Horizontal Line Test} \\ a function $f$ is one-to-one is and only if every horizontal line intersects the graph of $f$ in at most one point.}
+\bigbreak
+\begin{mdframed}
+	\begin{center}
+		\textbf{Example 2} 
+		Use the Horizontal line test to determine if the following are one-to-one functions.
+	\end{center}
+\end{mdframed}
+
+\qs{}{
+	$$f(x)=x^2-1$$
+}
+\pf{Solution to Question 1}
+
+
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[restrict y to domain=-10:10, restrict x to domain=-10:10,samples=200, xmin=-10, xmax=10, ymin=-10, ymax=10, axis lines=middle]
+				\addplot[color=red]{x^2-1};
+			\end{axis} 
+		\end{tikzpicture}
+	\end{center}
+	\textbf{Not one-to-one}
+\bigbreak
+\qs{}{
+	$$f(x) = \frac{2}{3}x+1$$
+}
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[restrict y to domain=-10:10, restrict x to domain=-10:10,samples=200, xmin=-10, xmax=10, ymin=-10, ymax=10, axis lines=middle]
+				\addplot[color=red]{2/3(x)+1};
+			\end{axis} 
+		\end{tikzpicture}
+	\end{center}
+\textbf{Yes, the graphs shows the function to be one-to-one}
+\bigbreak \bigbreak
+\nt{
+	\begin{enumerate}
+		\item A function that is increasing throughout its domain is one-to-one. 
+		\item A function that is decreasing throughout its domain is one-to-one.
+	\end{enumerate}
+}
+\bigbreak \bigbreak
+\dfn{}{Let $f$ be a one-to-one function with domain $D$ and range $R$. A function $g$ with domain $R$ and range $D$ is the inverse function of $f$, provided the following conditions is true for every $x$ in $D$ and every $y$ in $R$:.
+}
+
+
+
+
+
+
+
+
+
+\end{document}
