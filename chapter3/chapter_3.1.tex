@@ -1,0 +1,322 @@
+\documentclass{report}
+
+\input{~/latex/template/preamble.tex}
+\input{~/latex/template/macros.tex}
+
+\title{\Huge{Section 3.1 Notes}}
+\author{\huge{Matt Warner}}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{{3.1 Polynomial functions and models}}
+\lhead{\leftmark}
+\cfoot{\thepage}
+% \usepackage[default]{sourcecodepro}
+% \usepackage[T1]{fontenc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+\begin{document}
+  \maketitle
+
+  \begin{Large}
+  \noindent \textbf{Definition:}
+
+  \end{Large}  
+
+  \bigbreak \noindent
+  A polynomial function is a function of form $f(x) = a_nx^n + a_{n-1} + a_1x +a_0$ 
+  \bigbreak \noindent
+  where $a_n, a_{n-1},... ... ..., a_1, a_0$ are real numbers and $n$ is a nonnegative integer. 
+  The degree of a polynomial is the highest degree of its terms
+
+  \noindent \underline{Recall:}{
+    The domain of a polynomial function is all real numbers.
+  }
+
+  \bigbreak
+  \noindent \underline{Example 1}{
+    Determine whether the functions are polynomials or not.
+    For those who are state the degree of the polynomia.
+    For those who are not state why not.
+  }
+  \bigbreak \noindent
+  a) $f(x) = x(x+5)$
+  \pf{Answer}{}
+  \bigbreak
+   \textbf{factored form }= $f(x) = x^2 + 5x$
+   \bigbreak
+   is a polynomial
+  \bigbreak 
+  \textit{Degree: 2}
+  
+  \bigbreak \bigbreak \noindent
+  b) $f(x) = \sqrt{x}(\sqrt{x} - 2)$
+  \pf{Answer}
+  \bigbreak
+  
+  Not a polynomial, not an integer exponent
+  \bigbreak \bigbreak \noindent
+  c) $f(x) = \frac{x^2 - 5x}{x^3}$
+  \pf{Answer}
+  
+  Can be re-written as: $\frac{x^2}{x^3}$ - $\frac{5x}{x^3}$
+  \bigbreak
+  =  $x^{-1} - 5x^{-2}$
+  \bigbreak
+  since leading coeficient has negative exponent, it is \textbf{not} a polynomial
+
+  \bigbreak \bigbreak \noindent
+  d) $f(x) = -3x^2(x+5)^3$
+  \pf{Answer}
+
+  = $-3x^2(x^3+...)$
+  \bigbreak 
+  This is a polynomial
+  \bigbreak
+  \textit{degree: 5}
+
+  \bigbreak \bigbreak \noindent
+  \begin{Large}
+
+  \noindent  \underline{Power Functions}
+
+  \end{Large}
+  \bigbreak \noindent
+  A \textbf{Power Function} of degree $n$ is a \textbf{monomial} of the form $f(x) = ax^n$
+  where $a$ is a real number, $a \neq{0}$, and $n$ is a \textbf{positive integer}
+  \bigbreak \noindent
+  if $n$ is an \textbf{even integer}, then the following are true about the power functions:
+  \begin{enumerate}
+  \item The graph of the function is symmetric over the \textbf{y-axis}
+  \item $D$ = all real numbers; $R$ = $[0,\infty]$
+  \item The graph resembles the graph of $y = x^2$
+  \end{enumerate}
+  if $n$ is an \textbf{odd integer}, then the following are true about the power function:
+  \begin{enumerate}
+    \item The graph of the function is symmetric over the origin
+    \item $D$ = all real numbers; $R$ = all real numbers
+    \item The graph resembles the graph of $y = x^3$
+  \end{enumerate}
+  \bigbreak \bigbreak
+
+  \noindent \underline{Example 2}{
+  Use Transformations to graph each function
+}
+  \bigbreak
+  \noindent a) $f(x) = -x^4 + 3$
+
+  \begin{tikzpicture}
+
+    \begin{axis}[xmin=-10, xmax=10, ymin=-10, ymax=10, axis lines=middle]
+
+      \addplot[color=blue]{x^4};
+      \addplot[color=red, dashed]{-x^4 + 3};
+
+    \end{axis}
+
+  \end{tikzpicture}
+  \pf{Steps}
+
+  Parent Function: $y = x^4$ (Blue line)
+
+  negative sign infront of the leading coeficient represents: \textbf{Reflect over the x-axis}
+
+  constant is $+3$ which reprents: \textbf{shift up 3 units}
+  \bigbreak \bigbreak \noindent
+  b) $f(x) = \frac{1}{2}(x-1)^5 - 2$
+
+  \begin{tikzpicture}
+
+    \begin{axis}[xmin=-10, xmax=10, ymin=-10, ymax=10, axis lines=middle, restrict y to domain=-10:10, restrict x to domain=-10:10]
+      \addplot[color=blue]{x^3};
+      \addplot[color=red, samples=200, dashed]{1/2(x-1)^5-2};
+    \end{axis}
+
+  \end{tikzpicture}
+  \pf{Steps}
+
+  Parent Function: $y = x^5$ (Blue line)
+
+  1/2 represents: \textbf{compress by 1/2} (multiply y by 1/2)
+
+  -1 represents: \textbf{Shift to the right 1}
+  
+  -2 represents: \textbf{shift down 2}
+
+  \bigbreak \bigbreak
+
+  \begin{Large}
+    \noindent \textbf{Definition}
+  \end{Large} 
+  
+  \bigbreak \noindent
+  if $f$ is a function and $r$ is a real number for which $f(r) = 0$, then $r$ is called a real zero of $f$.
+
+  \noindent if $(x-r)^m$ is a factor of a polynomial $f$ and $(x-r)^{m+1}$ is \textbf{not} a factor, then $r$ is called a zero of multiplicity $m$ of $f$
+
+  \bigbreak
+
+  \noindent That is:
+  \begin{enumerate}
+
+  \item $r$ is a real zero of a polynomial function $f$.
+  \item $r$ is an x-intercept of the graph of $f$.
+  \item $x-r$ is a factor of $f$.
+
+  \end{enumerate}
+  
+  \bigbreak \bigbreak
+  \noindent \underline{Example 3}
+  Form a polynomial whose real zeros and degree are given.
+  \bigbreak
+  \noindent a) zeros: -2,2,3; degree: 3
+  \bigbreak
+  $p(x) = (x+2)(x-2)(x-3)$
+  \bigbreak
+  = $p(x) = x^3-3x^2-4x+12$
+  \bigbreak \bigbreak
+  \noindent b) zeros: -3,-1,2,5 degree: 4
+  \bigbreak 
+  $p(x) = (x+3)(x+1)(x-2)(x+5)$
+  
+  = $p(x) = x^4-3x^3-15x^2+19x+30$ 
+  \bigbreak \bigbreak \noindent
+  \begin{Large}
+
+    \noindent \textbf{Multiplicity and Turning Points}
+    
+  \end{Large}
+  \bigbreak 
+  \noindent If the zero is of \textbf{even multiplicity}; the graph of $f$ \textbf{touches} the x-axis at that zero
+  
+  \noindent If the zero is of \textbf{odd multiplicity}; the graph of $f$ \textbf{crosses} the x-axis at that zero
+  \bigbreak \bigbreak  
+
+  \begin{Large}
+  \noindent \underline{Definition}
+  \end{Large}
+  
+  \bigbreak \noindent
+  The points at which a graph changes direction are called \textbf{turning points} (each turning point yields a local maximum or local maximum)
+  \bigbreak
+  \noindent if $f$ is a polynomial of degree $n$, then $f$ has at most $n-1$ turning points.
+  
+  \noindent i.e. \textbf{maximum number of turning points = degree -1}
+  \bigbreak \noindent
+  For large values of $x$, either positive or negative, the graph of the polynomial
+
+  \noindent $f(x) = a_nx^n + a_{n-1} + ..._... + a_nx + a + 0$   
+
+  \noindent $y = a_nx^n$. The behavior of the graph of a function for large values of $x$, either positive and negative, is referred to as its end behavior
+  \bigbreak \noindent \underline{Example 4} For each polynomial function
+  \begin{enumerate}
+
+    \item List each real zero and its multiplicity
+    \item Find the x-axis and y-intercepts
+    \item Determine whether the graph crosses or touches the x-axis at each x-intercept 
+    \item Determine the maximum number of turning points on the graph
+    \item Determine the end behavior of the function
+    \item Sketch the graph of the polynomial
+
+  \end{enumerate}
+  \bigbreak
+  \noindent a) $f(x) =(x-\frac{1}{3})^2(x-1)^3$
+  \pf{Solution}
+
+    Zeros: $\frac{1}{3}, 1$
+    \bigbreak
+    Multiplicity = 2, 3
+    \bigbreak
+   x-intercepts: $\frac{1}{3}$ (touches), 1 (crosses) 
+    \bigbreak
+   y-intercepts = $-\frac{1}{9}$
+    \bigbreak
+    Max number of turning points: 4
+    \bigbreak
+    end-behavior: as $x\to\infty$,  $f(x)\to\infty$
+    as $x\to-\infty$, $f(x)\to-\infty$
+    \bigbreak \bigbreak \noindent
+    b) $f(x) = -2(x^2+1)^3$
+    \pf{Solution}
+
+      Zeros: None
+      \bigbreak 
+      Multiplicity: None
+      \bigbreak
+      x-intercepts: None
+      \bigbreak
+      y-intercepts: -2
+      \bigbreak
+      Max number of turning points: 5
+      \bigbreak
+      end-behavior: as $x\to\infty$, $f(x)\to-\infty$ as $x\to-\infty$, $f(x)\to
+      -\infty$
+      \bigbreak \bigbreak
+      \noindent c) $f(x) = 5x(x+3)^3$
+      \pf{Solution}
+
+      Zeros: 0, -3
+      \bigbreak
+      Multiplicity: 3, 1
+      \bigbreak
+      x-intercepts: 0,-3 
+      \bigbreak
+      y-intercepts: (0,0)
+      \bigbreak
+      Max number of turning points: 3
+      \bigbreak
+      \begin{center}
+       end-behavior:$$\lim_{x\to\infty} f(x)=\infty, \lim_{x\to-\infty} f(x) = -\infty$$
+      \end{center}
+
+    \bigbreak \bigbreak
+    \noindent d) $f(x) = -x^2(x^2-1)(x+1)^3$
+    \pf{Solution}
+
+    Zeros: 0, -1,1
+    \bigbreak
+    Multiplicity: 2, 1, 4
+    \bigbreak
+    x-intercepts: 0,-1,1
+    \bigbreak
+    y-intercepts: 0
+    \bigbreak
+    Max number of turning points: 6
+    \bigbreak
+    \begin{center}
+      End behavior: $$\lim_{x\to\infty} f(x) = -\infty, \lim_{x\to-\infty} f(x) = \infty$$
+      
+    \end{center}
+      
+
+      
+
+
+  
+
+
+
+
+
+\end{document}
+

@@ -1,0 +1,236 @@
+\documentclass{report}
+
+\input{~/latex/template/preamble.tex}
+\input{~/latex/template/macros.tex}
+
+\title{\Huge{Chapter 3.4 Notes}}
+\author{\huge{Matt Warner}}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Chapter 3.4 PROPERTIES OF RATIONAL FUNCTIONS}
+\lhead{\leftmark}
+\cfoot{\thepage}
+% \usepackage[default]{sourcecodepro}
+% \usepackage[T1]{fontenc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+\begin{document}
+  \maketitle
+
+  \begin{Large}
+    \noindent \textbf{Definition}
+  \end{Large}
+
+  \bigbreak
+    \noindent A rational function is a function of the form $f(x) = \frac{g(x)}{h(x)}$ where $g(x)$ and $h(x)$ are polynomials
+    and $h(x)\neq{0}$. 
+
+  \bigbreak \bigbreak
+  \noindent \underline{Recall}
+   Domain of rational functions is all real numbers except those that make denominator 0.
+
+  \bigbreak \bigbreak
+  \noindent \underline{Example 1}
+  find the domain of each rational function
+  \bigbreak
+  \begin{large}
+  \noindent a) $f(x) = \frac{x}{(x-6)(2-x)}$
+  \end{large}
+  \pf{Solution}
+  \bigbreak
+  $D: \{{x| x\neq{6,2}}\}$
+  
+  \bigbreak \bigbreak
+  \begin{large}
+  \noindent b) $k(x) = \frac{x-1}{x^2+3}$
+  \end{large}
+  \pf{Solution}
+  \bigbreak
+  $D: \mathbb{R}$
+  \bigbreak \bigbreak
+  \begin{large}
+    \noindent c) $f(x) = \frac{-2(x^2-1)}{(x^2+2x+1)}$
+  \end{large}
+  \pf{Solution}
+  \bigbreak
+  $D: \{x|x\neq{-2}\}$
+  \bigbreak \bigbreak
+  \begin{large}
+    \noindent\textbf{Vertical Asymptotes}
+    \bigbreak
+    \noindent The Vertical Asymptotes of a rational function can be found by setting the denominator to 0 and solve for x. That is, let $h(x)=0$.
+  \end{large}
+  \bigbreak \bigbreak 
+  \begin{large}
+    \noindent \textbf{Horizontal Asymptotes} 
+    \bigbreak
+    $$Let f(x) = \frac{a_nx^n+a_{n-1}x^{n-1}+..._{...}+a_1+a_0}{b_kx^k+b_{k-1}x^{k-1}+..._{...}+b_1+b_0}$$
+
+  \end{large}
+  \bigbreak
+  \begin{normalsize}
+  \begin{enumerate}
+    \item if $n<k$, then the x-axis (the line $y=0$) is the Horizontal Asymptote for the graph of $f$.
+
+    i.e. degree of numerator = degree of denominator implies H.A. is $y=0$
+  \item if $n=k$, then the line $y=a_n/b_k$ (the ratio of leading coefficients) is the Horizontal Asymptote for the graph of $f$.
+  \item if $n>k$, the graph has no Horizontal Asymptote.
+
+  Instead, either $f(x)\to\infty$ or $f(x)\to-\infty$ as $x\to\infty$ or as $x\to-\infty$
+  \bigbreak 
+  i.e. degree of numerator > degree of denominator implies no H.A.
+  \bigbreak
+  There is an O.A. (oblique asymptote) is degree numerator = degree denominatorThere is an O.A. (oblique asymptote) is degree numerator = degree denominator $+ 1$
+
+    
+  \end{enumerate}
+  \end{normalsize}
+  \bigbreak \bigbreak
+  \begin{large}
+  
+  \noindent \textbf{Oblique Asymptote}
+  \bigbreak 
+  \noindent An oblique asymptote for a graph in a line $y=ax+b$, with $a\neq{0}$, such that the graph approaches this line a $x\to\infty$ or as $x\to-\infty$
+  \bigbreak
+  \noindent \underline{Note:}
+  \noindent The degree of the numerator must be one greater than the degree of the denominator. To find the oblique asymptote, do long division (or synthetic division)
+  \end{large}
+  \bigbreak \bigbreak
+  \begin{large}
+    \noindent \underline{Example 2}
+    Find the vertical, horizontal, and oblique asymptotes, if any, of each rational function
+  \end{large} 
+    \bigbreak
+    \qs{}{
+      $$f(x) = \frac{2x+7}{x^2-3x+2}$$
+  }
+
+    \pf{Solution for question 1}{
+    \begin{align*}
+      f(x)=\frac{2x+7}{(x-1)(x-2)}
+    \end{align*}
+    \indent \textbf{Vertical Asymptote:} x = 1, x = 2
+    \bigbreak
+    \indent \textbf{Horizontal Asymptotes:} y = 0
+    \bigbreak
+    \indent \textbf{Oblique Asymptote:} None
+  }
+  \bigbreak
+  \qs{}{
+  $$f(x)=\frac{5x^2+3x-1}{4x+1}$$
+  }
+
+    \pf{Solution for question 2}
+    
+      \bigbreak
+      \indent \textbf{Vertical Asymptote:} x = $-\frac{1}{4}$
+      \bigbreak
+      \indent \textbf{Horizontal Asymptotes:} None
+      \bigbreak
+      \indent \textbf{Oblique Asymptote:} y = $\frac{5}{4}x + \frac{7}{16}$
+  \bigbreak
+  \qs{}{
+    $$f(x)=\frac{6x^2-4x+3}{2x^2+x-1}$$
+
+  }
+  \pf{Solution to question 3}{
+
+  \begin{align*}
+    f(x)=\frac{6x^2-4x+3}{(x+1)(2x-1)}
+  \end{align*}
+      \bigbreak
+      \indent \textbf{Vertical Asymptote:} x = -1, x = $\frac{1}{2}$
+      \bigbreak
+      \indent \textbf{Horizontal Asymptotes:} y = 3
+      \bigbreak
+      \indent \textbf{Oblique Asymptote:} None
+  }
+  \qs{}{
+  $$f(x)=\frac{x^2+x-12}{x^2-9}$$
+  }
+  \pf{Solution to question 4}{
+    \begin{align*}
+      f(x)=\frac{(x-3)(x+4)}{(x+3)(x-3)} \\
+      f(x)=\frac{x+4}{x+3}
+    \end{align*}
+      \bigbreak
+      \indent \textbf{Vertical Asymptote:} x = - 3
+      \bigbreak
+      \indent \textbf{Horizontal Asymptotes:} y = 1
+      \bigbreak
+      \indent \textbf{Oblique Asymptote:} None
+  }
+  \bigbreak \bigbreak \bigbreak
+  \begin{large}
+    \noindent \underline{Example 3}
+    Graph each rational function using transformations 
+  \end{large}
+  \bigbreak
+  \qs{}{
+  $$f(x)=3+\frac{1}{x^2}$$
+  }
+  \pf{Solution to question 5}
+
+  Shift vertically by a factor of 3
+  \bigbreak
+ \begin{center}
+  \begin{tikzpicture}
+    \begin{axis}[restrict y to domain=-10:10,samples=200, xmin=-10, xmax=10, ymin=-10, ymax=10, axis lines=middle]
+      \addplot[color=red]{3+(1/x^2)};
+      \addplot[color=blue, dashed]{3};
+    \end{axis} 
+  \end{tikzpicture}
+  \end{center}
+  
+  \qs{}{
+    $$f(x)=\frac{2}{(x+3)^2}$$
+  }
+  \bigbreak \bigbreak \bigbreak
+  \pf{Solution to question 6}{
+
+
+  \begin{align*}
+   2 * \frac{1}{(x+3)^2}
+  \end{align*}
+  \bigbreak
+  \begin{center}
+    1. Shift up 2
+    \bigbreak
+    2. Shift left 3 
+  \bigbreak
+  \end{center}
+    \begin{center}
+      \begin{tikzpicture}
+        \begin{axis}[restrict y to domain=-10:10, restrict x to domain=-10:10,samples=500, xmin=-10, xmax=10, ymin=-10, ymax=10, axis lines=middle]
+          \addplot[color=red]{2/(x+3)^2};
+        \end{axis} 
+      \end{tikzpicture}
+    \end{center}
+  
+  } 
+
+
+
+
+\end{document}
