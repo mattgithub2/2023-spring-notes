@@ -1,0 +1,296 @@
+\documentclass{report}
+
+\input{~/latex/template/preamble.tex}
+\input{~/latex/template/macros.tex}
+
+\title{\Huge{Chapter 11.2 Notes}}
+\author{\huge{Matt Warner}}
+\date{\huge{}}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Section 11.2 - Arithmetic Sequence}
+\lhead{\leftmark}
+\cfoot{\thepage}
+% \usepackage[default]{sourcecodepro}
+% \usepackage[T1]{fontenc}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+\begin{document}
+	\maketitle
+\begin{LARGE}
+	\begin{center}
+		\textbf{ARITHMETIC SEQUENCE} 
+	\end{center}
+\end{LARGE}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+ Determine Whether a Sequence is Arithmetic 
+ \vspace{5mm}
+
+ $$a_1 = a, \hspace{10mm} a_n = a_{n-1} +d$$
+\end{large}
+\bigbreak \noindent
+
+\nt{
+	In the equation above, the variable $d$, is refered to as the \textit{common difference}, the difference between consecutive terms in the sequence.
+
+	 $$d = a_n - a_{n-1}$$
+}
+\bigbreak \noindent \bigbreak \noindent \bigbreak \noindent 
+
+\begin{large}
+	  \noindent \textbf{Example 1} 
+	 Show that the sequence is arithmetic. List the first term and the common difference.
+\end{large}
+\bigbreak \noindent
+
+\line(1,0){450}
+
+\begin{center}
+\begin{large}
+	{\LARGE{a)}} $ 4, 2,0, -2,\ldots$
+\end{large}
+\end{center}
+
+\line(1,0){450}
+\bigbreak \noindent
+
+\begin{center}
+ $d = (2-4) \rightarrow (0-2) \rightarrow (-2-0)$
+ \vspace{2mm}
+
+ $d = -2$
+ \vspace{4mm}
+
+ The common difference shows that this sequence is arithmetic, not geometric.
+\end{center}
+\bigbreak \noindent \bigbreak \noindent
+
+\line(1,0){450}
+
+\begin{center}
+\begin{large}
+	{\LARGE{b)}} $\left\{s_n\right\}=\{4 n-1\}$
+\end{large}
+\end{center}
+
+\line(1,0){450}
+
+\begin{center}
+ $s_1 = 4(1) - 1$
+ $=3$
+\vspace{2mm}
+
+$s_2 = 4(2) - 1$
+$ = 7$
+\vspace{2mm}
+
+$s_3 = 4(3) -1$
+$=11$
+\vspace{2mm}
+
+$s_4 = 4(4) - 1$
+$=15$
+\vspace{2mm}
+
+Here we can see that the common difference between the terms in the sequence is {\large{4}}.
+\end{center}
+\vspace{3mm}
+
+Alternatively,
+
+$$
+\begin{aligned}
+S_n-S_{n-1} & =4 n-1-(4(n-1)-1) \\
+& =4 n-1-[4 n-4-1] \\
+& =4 n-1-[4 n-5] \\
+& =4 n-1-4 n+5 \\
+& =4 \quad \text { common differnece}
+\end{aligned}
+$$
+\newpage
+\noindent
+\begin{LARGE}
+	\textbf{Find a Formula for an Arithmetic Sequence}  
+\end{LARGE}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+ $n$th Term of an Arithmetic Sequence 
+ \vspace{4mm}
+
+\begin{mdframed}
+\noindent For an arithmetic sequence, $\{a_n\}$ whose first term is $a$ and whose common difference is $d$, the $n$th term is determined by the formula
+ $$a_n = a + (n-1)d$$
+\end{mdframed}
+\end{large}
+\nt{
+$$
+\begin{aligned}
+& a_1=a \\
+& a_2=a_1+d=a+d \\
+& a_3=a_2+d=a+d+d=a+2 d \\
+& a_4=a_3+d=a+2 d+d=a+3 d \\
+& \vdots \\
+& a_n=a_{n-1}+d= a +(n-1)d
+\end{aligned}
+$$
+}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+ \begin{center}
+	 \textbf{Example 2} 
+	 Find the twenty fourth term of the arithmetic sequence:
+ \end{center} 
+\end{large}
+
+\line(1,0){450}
+
+\begin{center}
+\begin{large}
+	$-3,0,3,6,\ldots$
+\end{large}
+\end{center}
+
+\line(1,0){450}
+
+\begin{center}
+	$a = -3$ \hspace{10mm} $d = 3$
+	\vspace{4mm}
+
+	$a_n = a +(n-1)d$ 
+	\vspace{2mm}
+
+	$-3 +(n-1)\cdot 3$
+	\vspace{2mm}
+
+	$-3+3n-3 \rightarrow 3n-6$
+	\vspace{2mm}
+	
+	$a_{24} = 3(24) -6$
+	\vspace{2mm}
+
+	$=\boxed{66}$
+\end{center}
+\bigbreak \noindent \bigbreak \noindent \bigbreak \noindent
+
+\begin{large}
+\noindent \textbf{Example 3:} 
+	 The sixth term of an arithmetic sequence is 26, and the nineteenth term is 78. Find the first term and the common difference. Give a recursive formula for the sequence. What is the nth term of the sequence? 
+\end{large}
+
+\begin{center}
+\hspace{10mm} $a_6 = 26$ \hspace{10mm} $a_{19} = 78$ \hspace{10mm}
+\vspace{3mm}
+
+$a_n = a + (n-1)d$
+$$
+\begin{aligned}
+& 26=a+(6-1) d \\
+& 78=a+(19-1) d
+	\end{aligned} \hspace{2mm} \Rightarrow\left\{\begin{array}{l}
+26=a+5 d \\
+78=a+18 d .
+\end{array}\right.
+$$
+$$52 = 13d$$
+$$4 =d$$
+\end{center}
+So,
+
+$26 = a + 5(4) =6$
+
+$a_1 = 6$
+\newpage
+\noindent
+\begin{LARGE}
+	\textbf{Sum of n Terms of an Arithmetic Sequence}
+\end{LARGE}
+\bigbreak \noindent
+\begin{large}
+	Let $\{a_n\}$ be an arithmetic sequence with first term $a$ and common difference $d$. The sum $s_n$ of the first n terms of $\{a_n\}$ is 
+	\vspace{3mm}
+
+	$$S_n=\frac{n}{2}[2 a+(n-1) d]=\frac{n}{2}\left(a+a_n\right)$$
+\end{large}
+\bigbreak \noindent \bigbreak \noindent \bigbreak \noindent
+\begin{large}
+\begin{center}
+	\textbf{Find the sum of the first n terms of the sequence} 
+\end{center}  
+\end{large}
+
+\line(1,0){450}
+
+\begin{center}
+\begin{large}
+	$\{4n + 2\}$
+\end{large}
+\end{center}
+
+\line(1,0){450}
+\bigbreak \noindent
+
+\begin{minipage}[t]{0.45\textwidth}
+    \begin{align*}
+        a_1 &= 4(1) + 2 = 6 \\
+        a_2 &= 10 \\
+        a_3 &= 14 \\
+        a_4 &= 18 \\
+		a_5 &= 22 \\
+		a_6 &= 26 \\
+		a_7 &= 30 \\
+    \end{align*}
+\end{minipage}\hfill%
+\begin{minipage}[t]{0.45\textwidth}
+    \begin{align*}
+        s_n &= 6+10+14+18+\ldots+4n+2 \\
+        &= \frac{n}{2}(a_1+a_n) \\
+        &= \frac{n}{2}(8+4n) \\
+        &= \frac{4n(2+n)}{2} \\
+		&= \boxed{2n(2+n)} \\
+    \end{align*}
+\end{minipage}
+\bigbreak \noindent \bigbreak \noindent \bigbreak \noindent
+
+\begin{large}
+	\noindent \textbf{Example 5:}
+	The conrner section of a stadium has 20 seats in the first row and 40 rows in all. Each successive row contains two additional seats. How many seats are in this section?
+\end{large}
+\vspace{4mm}
+
+\pf{Solution}
+
+Given that each row has 2 more seats then the previous rows.
+$$s_{40} = 20 +22+24+\ldots$$
+$$a_n = a +(n-1)d$$
+$$ = 20 +39 \cdot 2$$
+$$a_n = 98$$
+$$s_{40} = \frac{n}{2}(a+a_n)$$
+$$\frac{40}{2}(20+98)$$
+
+$$ = \boxed{2360}$$
+\end{document}
