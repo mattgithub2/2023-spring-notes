@@ -315,7 +315,7 @@ If a graph $G$ is connected and the degree of every vertex of $G$ is a postive e
 \includegraphics[width=0.5\textwidth]{figure8.png }
 \end{figure}
 
-Each vertex of this graph has an even degree except for $A$ and $B$, hence by Corollary 0.4.2 \\ \indent there is an Euler trail from $A$ to $B$ one such trail is
+Each vertex of this graph has an even degree except for $A$ and $B$, hence by Corollary 0.4.1 \\ \indent there is an Euler trail from $A$ to $B$ one such trail is
 
 $$ A - G - H - F - E - I - H - E - K - J - D - C - B$$
 \bigbreak \noindent \bigbreak \noindent 
@@ -490,8 +490,162 @@ B =
 \]
 \bigbreak \noindent \bigbreak \noindent
 \begin{large}
-	\textbf{\subsection{Matrices and Undirected Graphs}} 
+	\textbf{\subsection{Symmetric Matrices}} 
 \end{large}
+\thmcon{
+	\textbf{\underline{Defintion}}
+	\vspace{3mm}
+
+	An $n \times n$ square matrix $\mathbf{A}=\left(a_{i j}\right)$ is called symmetric if, and only if, for every $i$ and $j=1,2, \ldots, n$,
+$$
+a_{i j}=a_{j i}
+$$
+}
+\bigbreak \noindent 
+\ex{}{
+	Which of the following matrices are symmetric?
+	\vspace{5mm}
+
+\begin{minipage}{0.3\textwidth}
+    \[
+    A =
+    \begin{bmatrix}
+    1 & 0 \\
+    1 & 2
+    \end{bmatrix}
+    \]
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+    \[
+    B =     
+    \begin{bmatrix}
+    0 & 1 & 2 \\    
+    1 & 1 & 0 \\ 
+    2 & 0 & 3
+    \end{bmatrix}
+    \]
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+    \[
+    C = 
+    \begin{bmatrix}
+    2 & 0 & 0 \\
+    0 & 1 & 0
+    \end{bmatrix}
+    \]
+\end{minipage}
+}
+\pf{Soultion}
+
+Only graph $B$ is symmetric
+\vspace{2mm}
+
+In matrix $A$ the entry in the first row and the second column differs from the entry in the second row and 
+
+the first column; the matrix, $C$, is not even square.
+\newpage
+\begin{large}
+	\textbf{\subsection{Matrix Multiplication}} 
+\end{large}
+\bigbreak \noindent
+The product of two matrices is built up of \textit{scalar} or \textit{dot} products of their individual rows and columns.
+\bigbreak \noindent
+\thmcon{
+	\textbf{\underline{Defintion}}
+	\vspace{3mm}
+
+	Suppose that all entries in matrices $\mathbf{A}$ and $\mathbf{B}$ are real numbers. If the number of element, $n$, in the $i$ th row of $\mathbf{A}$ equals the number of elements in the $j$ th column of $\mathbf{B}$, then the scalar product or dot product of the $i$ th row of $\mathbf{A}$ and $j$ th column of $\mathbf{B}$ is the real number obtained as follows:
+$$
+\left[\begin{array}{llll}
+a_{i 1} & a_{i 2} & \cdots & a_{i n}
+\end{array}\right]\left[\begin{array}{c}
+b_{1 j} \\
+b_{2 j} \\
+\vdots \\
+b_{n j}
+\end{array}\right]=a_{i 1} b_{1 j}+a_{i 2} b_{2 j}+\cdots+a_{i n} b_{n j}
+$$
+\bigbreak \noindent
+}
+\bigbreak \noindent \bigbreak \noindent
+\ex{}{
+	\begin{center}
+	\begin{minipage}{0.3\textwidth}
+	\[
+	 A =
+	\begin{bmatrix}
+		2 & 0 & 3 \\
+		-1 & 1 & 0
+	\end{bmatrix}
+	\]
+	\end{minipage}
+	\begin{minipage}{0.3\textwidth}
+	\[
+	B = 	
+	\begin{bmatrix}
+	4 & 3 \\
+	2 & 2 \\
+	-2 & -1
+	\end{bmatrix}
+	\]
+	\end{minipage}
+	\end{center}
+}
+\pf{solution}
+
+A has size $2 \times 3$ and $\mathbf{B}$ has size $3 \times 2$, so the number of columns of $\mathbf{A}$ equals the number of rows of $\mathbf{B}$ and
+
+the matrix product of $\mathbf{A}$ and $\mathbf{B}$ can be computed. Then
+\bigbreak \noindent
+\begin{center}
+$\left[\begin{array}{rrr}
+2 & 0 & 3 \\
+-1 & 1 & 0
+\end{array}\right]\left[\begin{array}{rr}
+4 & 3 \\
+2 & 2 \\
+-2 & -1
+\end{array}\right]=\left[\begin{array}{ll}
+c_{11} & c_{12} \\
+c_{21} & c_{22}
+\end{array}\right]$
+\end{center}
+
+Where,
+
+$$c_{11} = 2 \cdot 4 + 0 \cdot 2 + 3 \cdot (-2) = 2$$
+$$
+c_{12} = 2 \cdot 3+0 \cdot 2+3 \cdot(-1)=3
+$$
+$$
+c_{21} = (-1) \cdot 4 + 1 \cdot 2 + 0 \cdot (-2) = -2
+$$
+$$
+c_{22} = (-1) \cdot 3 + 1 \cdot 2 + 0 \cdot (-1) = -1
+$$
+
+Hence,
+
+\[
+AB =
+\begin{bmatrix}
+	2 & 3 \\
+	-2 & -1
+\end{bmatrix}
+\]
+\pagebreak
+\begin{large}
+	\textbf{\section{Isomorphisms of Graphs}} 
+\end{large}
+
+
+
+
+
+
+
+
+
 
 
 
