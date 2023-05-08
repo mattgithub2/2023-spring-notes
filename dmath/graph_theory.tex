@@ -13,12 +13,7 @@
 \cfoot{\thepage}
 % \usepackage[default]{sourcecodepro}
 % \usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\usepackage{tikz}
-\usepackage{pgfplots}
-\usepackage{caption}
-\usepackage{amsmath}
-\pgfplotsset{compat=1.18}
+% \definecolor{doc}{R
 
 \pgfpagesdeclarelayout{boxed}
 {
@@ -41,8 +36,14 @@
 
 \pgfpagesuselayout{boxed}
 
+
+
+
+
 \begin{document}
 	\maketitle
+	\tableofcontents
+	\pagebreak
 \begin{LARGE}
 		\textbf{\section{Trails, Paths, and Circuits}}
 \end{LARGE}
@@ -146,7 +147,7 @@ where the $v$ 's represent vertices, the $e$ 's represent edges, $v_0=v, v_n=w$,
 \end{LARGE}
 \bigbreak \noindent
 \thmcon{
-	\textbf{\underline{Defintion}}
+	\textbf{\underline{Definition}}
 	\vspace{3mm}
 	
 A graph $H$ is said to be a subgraph of a graph $G$ if, and only if, every vertex in $H$ is also a vertex in $G$, every edge in $H$ is also an edge in $G$, and every edge in $H$ has the same endpoints as it has in $G$.
@@ -183,7 +184,7 @@ A graph $H$ is said to be a subgraph of a graph $G$ if, and only if, every verte
 \end{LARGE}
 \bigbreak \noindent
 \thmcon{
-	\textbf{\underline{Defintion}}
+	\textbf{\underline{Definition}}
 	\vspace{3mm}
 	
 	Let $G$ be a graph. Two \textbf{vertices, $v$ and $w$ of $G$ are connected} if, and only if, there is a walk from $v$ to $w$. 
@@ -254,7 +255,7 @@ V_3=\left\{v_5, v_6, v_7, v_8\right\}, & E_3=\left\{e_3, e_4, e_5\right\} .
 	\textbf{\section{Euler Circuits}}
 \end{LARGE}
 \thmcon{
-	\textbf{\underline{Defintion}}
+	\textbf{\underline{Definition}}
 	\vspace{3mm}
 
 	Let $G$ be a graph. An Euler circuit for $G$ is a circuit that contains every vertex and every edge of $G$. That is, an Euler circuit for $G$ is a sequence of adjacent vertices and edges in $G$ that has at least one edge, starts and ends at the same vertex, uses every vertex of $G$ at least once, and uses every edge of $G$ exactly once.
@@ -291,7 +292,7 @@ If a graph $G$ is connected and the degree of every vertex of $G$ is a postive e
 \end{large}
 \bigbreak \noindent 
 \thmcon{
-	\textbf{\underline{Defintion}}
+	\textbf{\underline{Definition}}
 	\vspace{3mm}
 
 	Let $G$ be a graph, and let $v$ and $w$ be two distinct vertices of $G$. An Euler trail from $v$ to $w$ is a sequence of adjacent edges and vertices that starts at $v$, ends at $w$, passes through every vertex of $G$ at least once, and traverses every edge of $G$ exactly once.
@@ -324,7 +325,7 @@ $$ A - G - H - F - E - I - H - E - K - J - D - C - B$$
 \end{LARGE}
 \bigbreak \noindent
 \thmcon{
-	\textbf{\underline{Defintion}}
+	\textbf{\underline{Definition}}
 	\vspace{3mm}
 
 	Given a graph $G$, a \textbf{Hamiltonian circuit} for $G$ is a simple circuit that includes every vertex of $G$. That is, a Hamiltonian circuit for $G$ is a sequence of adjacent vertices and distinct edges in which every vertex of $G$ appears exactly once, except for the first and the last, which are the same.
@@ -350,7 +351,7 @@ $$ A - G - H - F - E - I - H - E - K - J - D - C - B$$
 	\textbf{\section{Matrices}} 
 \end{large}
 \thmcon{
-	\textbf{\underline{Defintion}}
+	\textbf{\underline{Definition}}
 	\vspace{3mm}
 
 	Matrices are two-dimensional analogues of sequences.
@@ -493,7 +494,7 @@ B =
 	\textbf{\subsection{Symmetric Matrices}} 
 \end{large}
 \thmcon{
-	\textbf{\underline{Defintion}}
+	\textbf{\underline{Definition}}
 	\vspace{3mm}
 
 	An $n \times n$ square matrix $\mathbf{A}=\left(a_{i j}\right)$ is called symmetric if, and only if, for every $i$ and $j=1,2, \ldots, n$,
@@ -551,7 +552,7 @@ the first column; the matrix, $C$, is not even square.
 The product of two matrices is built up of \textit{scalar} or \textit{dot} products of their individual rows and columns.
 \bigbreak \noindent
 \thmcon{
-	\textbf{\underline{Defintion}}
+	\textbf{\underline{Definition}}
 	\vspace{3mm}
 
 	Suppose that all entries in matrices $\mathbf{A}$ and $\mathbf{B}$ are real numbers. If the number of element, $n$, in the $i$ th row of $\mathbf{A}$ equals the number of elements in the $j$ th column of $\mathbf{B}$, then the scalar product or dot product of the $i$ th row of $\mathbf{A}$ and $j$ th column of $\mathbf{B}$ is the real number obtained as follows:
@@ -637,16 +638,165 @@ AB =
 \begin{large}
 	\textbf{\section{Isomorphisms of Graphs}} 
 \end{large}
+\bigbreak \noindent
+\thmcon{
+	\textbf{\underline{Definition}}
+	\vspace{3mm}
 
+	Two graphs that are the same except for the labeling of their vertices and edges are called \textit{isomorphic}. The word isomorphism comes from the Greek, meaning "same form." Isomorphic graphs are those that have essentially the same form
+	\vspace{7mm}
 
+	Let $G$ and $G^{\prime}$ be graphs with vertex sets $V(G)$ and $V\left(G^{\prime}\right)$ and edge sets $E(G)$ and $E\left(G^{\prime}\right)$, respectively. $\boldsymbol{G}$ is isomorphic to $\boldsymbol{G}^{\prime}$ if, and only if, there exist one-to-one correspondences $g: V(G) \rightarrow V\left(G^{\prime}\right)$ and $h: E(G) \rightarrow E\left(G^{\prime}\right)$ that preserve the edge-endpoint functions of $G$ and $G^{\prime}$ in the sense that for each $v \in V(G)$ and $e \in E(G)$,
+$v$ is an endpoint of $e \Leftrightarrow g(v)$ is an endpoint of $h(e)$.
+\bigbreak \noindent
+\begin{center}
+	$v$ is an endpoint of $e \Leftrightarrow g(v)$ is an endpoint of $h(e)$.
+\end{center}
+In other words,
+\bigbreak \noindent
+ $G$ is isomorphic to $G^{\prime}$ if, and only if, the vertices and edges of $G$ and $G^{\prime}$ can be matched up by one-to-one, onto functions in such a way that the edges between corresponding vertices correspond to each other.
+}
+\bigbreak \noindent
+\ex{}{
+	Show that the following two graphs are isomorphic.
+}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.6\textwidth]{ figure13.png }
+\end{figure}
+\pf{Solution}
 
+\noindent To solve this problem, you must find functions g: $V(G) \rightarrow V(G^{\prime})$ and h: $E(G) \rightarrow E(G^{\prime})$ such that for each $v\in V(G)$ and $e \in E(G)$, v is an endpoint of e if, and only if, $g(v)$ is an endpoint of $h(e)$
+\bigbreak \noindent
+\nt{
+	Setting up such functions is partly a matter of trial and error and partly a matter of deduction.
+	\vspace{4mm}
+	
+	For instance, since $e_2$ and $e_3$ are parallel (\textit{have the same endpoint}), $h(e_2)$ and $h(e_3)$ must be parallel also.
+}
+\bigbreak \noindent
+One pair of functions for showing isomorphism between the two graphs is shown below
+\newpage
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.7\textwidth]{ figure14.png }
+\end{figure}
+\bigbreak \noindent 
+\begin{large}
+	\textbf{\section{Trees}}
+\end{large}
 
+\thmcon{
+	\textbf{\underline{Definition}}
+	\vspace{3mm}
 
+	In mathematics, a tree is a connected graph that does not contain any circuits. Mathematical trees are similar in certain ways to their botanical namesakes.	
+	\vspace{3mm}
 
+	A graph is said to be circuit-free if, and only if, it has no circuits. A graph is called a tree if, and only if, it is circuit-free and connected. A \textbf{trivial tree} is a graph that consists of a single vertex. A graph is called a forest if, and only if, it is circuit-free and not connected.
+}
+\bigbreak \noindent \bigbreak \noindent
 
+\ex{Trees and Non-trees}{
+	All the graphs shown in figure {4} are trees, whereas those in figure {5} are not.
+}
+\bigbreak \noindent 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.6\textwidth]{ figure15.png }
+\caption{Trees}
+\end{figure}
+\bigbreak 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.55\textwidth]{ figure16.png }
+\caption{Non-Trees}
+\end{figure}
+\pagebreak
 
+\noindent \begin{LARGE}
+	\textbf{Examples of Trees}
+\end{LARGE}
+\bigbreak \noindent \bigbreak \noindent
+\ex{A Decision Tree}{
+	During orientation week, a college administers a mathematics placement exam to all entering students. The exam consists of two parts, and placement recommendations are made as indicated by the tree shown below in figure 6.
+}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.6\textwidth]{ figure17.png }
+\caption{}
+\end{figure}
+\bigbreak \noindent
+We read the tree from left to right to decide what course should be recommended for a student who scored 9 on part I and 7 on part II.
+\vspace{5mm}
 
+Since the student socred 9 on part I, the score on part II is checked.
+\vspace{4mm}
 
+Since it is greater than 6, the student should be advised to take Math 110.
+\bigbreak \noindent 
+\begin{large}
+	\textbf{\subsection{Characterizing Trees}} 
+\end{large}
+\thmcon{
+	\textbf{\underline{Defintion}}
+	\vspace{3mm}
+
+	There is a somewhat suprising relation between the number of vertices and the number of edges of a tree.
+	\vspace{4mm}
+
+	It turns out that if $n$ is a postive integer, then any tree with $n$ vertices (no matter what its shape) has $n-1$ edges.
+	\vspace{4mm}
+
+	Perhaps even more surprisingly, a partial converse to this fact is also true - namely, any connected graph with $n$ vertices and $n-1$ edges is a tree.
+	\vspace{4mm}
+
+	It follows from these facts that if even one new edge (but no new vertex) is added to a tree, the resulting graph must contain a circuit.
+	\vspace{4mm}
+
+	Also, from the fact that removing an edge from a circuit does not disconnect a graph, it can be shown that every connected graph has a subgraph that is a tree.
+	\vspace{4mm}
+
+	It follows that if $n$ is a positive integer, any graph with $n$ vertices and \textit{fewer} than $n-1$ edges is not connected.
+}
+\pagebreak
+\thm{}{Any tree that has more than one vertex has at least one vertex of degree 1.}
+\bigbreak \noindent
+\thm{}{ For any positive integer $n$, any tree with $n$ vertices has $n-1$ edges.}
+\bigbreak \noindent 
+\thmcon{
+	\textbf{\underline{Terminal Vertices}}
+	\vspace{3mm}
+
+	Let $T$ be a tree. If $T$ has at least two vertices, then a vertex of degree 1 in $T$ is called a \textbf{leaf} (or a \textbf{terminal vertex}), and a vertex of degree greater than 1 in $T$ is called an \textbf{internal vertex} (or a \textbf{branch vertex}). The unique vertex in a trivial tree is also called a \textbf{leaf} or \textbf{terminal vertex}.
+}
+\bigbreak \noindent \bigbreak \noindent \bigbreak \noindent
+\ex{}{
+	Find all leaves (or terminal vertices) and all internal (or branch) vertices in the following tree.
+}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.64\textwidth]{ tree1.png }
+\end{figure}
+\pf{Solution}
+
+The terminal vertices are {\large{$$v_0, v_2, v_4, v_5, v_7, v_8$$}}
+\vspace{3mm}
+
+The internal vertices are {\large{$$v_6, v_1, v_3$$}}
+\bigbreak \noindent \bigbreak \noindent
+\vspace{2mm}
+
+\ex{}{
+	A graph $G$ has ten vertices and twelve edges. Is it a tree?
+}
+\pf{Solution}
+
+No, By definition of Theorem 8.2, any tree with ten vertices has nine edges, not twelve.
+\pagebreak
+\begin{large}
+	\textbf{\subsection{Rooted Trees}}
+\end{large}
 
 
 
