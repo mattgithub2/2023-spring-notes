@@ -1,0 +1,280 @@
+\documentclass{report}
+
+\input{~/latex/template/preamble.tex}
+\input{~/latex/template/macros.tex}
+
+\title{\Huge{Chapter 11.3 Notes}}
+\author{\huge{Matt Warner}}
+\date{\huge{}}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+\lhead{\leftmark}
+\cfoot{\thepage}
+% \usepackage[default]{sourcecodepro}
+% \usepackage[T1]{fontenc}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{1.5pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+\begin{document}
+	\maketitle
+\begin{LARGE}
+ \begin{center}
+	 \textbf{GEOMETRIC SEQUENCE} 
+ \end{center} 
+\end{LARGE}
+\bigbreak \noindent \bigbreak \noindent
+
+\noindent \begin{large}
+ Determine Whether a Sequence is Geometric 
+	\bigbreak \noindent 
+\thmcon{
+	\textbf{\underline{Defintion}}
+	\vspace{2mm}
+
+	The formula for a Geometric Sequence is as follows:
+	\bigbreak \noindent
+	 $$ a_1 = a \hspace{10mm} a_n = ra_{n-1}$$
+	\vspace{3mm}
+
+	where $r$ = the common ratio
+	\vspace{6mm}
+
+	Formula for $r$
+	$$r = \frac{a_n}{a_{n-1}}$$
+	\bigbreak \noindent
+	Formula for sum of a geometric sequence:
+
+	$$
+	\text { sum: } s_n=\frac{a_1\left(1-r^n\right)}{(1-r)}
+	$$
+	\bigbreak \noindent
+	Formula for $n$th term
+
+	$$
+	\text { nth term: } a_n=a_1 r^{(n-1)}
+	$$
+
+}
+\end{large}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+ \begin{center}
+	 \textbf{Examples} 
+ \end{center} 
+\end{large}
+
+\ex{Show that the sequence is geometric. List the first term and the common ratio.}{
+	\vspace{3mm}
+
+	a) $2,8,32,128$
+}
+	\bigbreak \noindent
+
+	Using the formula  $$ r = \frac{a_n}{a_{n-1}}$$
+	\vspace{3mm}
+	
+	We find that $$r = \frac{8}{2} = 4$$
+	\vspace{3mm}
+
+	So,
+	$$a_1 = 2 \hspace{5mm} r = 4$$
+\pagebreak
+\ex{Show that the sequence is geometric. List the first term and the common ratio.}{
+	\vspace{3mm}
+
+b) $ \{s_n\} = \{3^{n+1}\}$
+}
+\bigbreak \noindent
+
+Given that $s_n = 3^{n+1}$ we can use the formula 
+\vspace{2mm}
+
+$$r = \frac{a_n}{a_{n-1}}$$
+\vspace{2mm}
+
+So, 
+
+$$ \frac{3^{n+1}}{3^{n-1+1}} = \frac{3^{n+1}}{3^n}$$
+
+\nt{Recall rules of exponents:
+	\vspace{3mm}
+
+When you have the same base and you are dividing, you subtract the exponents}
+\bigbreak 
+So,
+
+$$\frac{3^{n+1}}{3^n} = 3^{n+1 -n}$$
+\vspace{3mm}
+
+After simplifing we get
+
+$$r = 3$$
+\vspace{3mm}
+
+Therefore,
+
+$$s_1 = 9 \hspace{6mm} r = 3$$
+\bigbreak \noindent \bigbreak \noindent
+
+\ex{Show that the sequence is geometric. List the first term and common ratio.}{
+	\vspace{3mm}
+
+(c) $\left\{t_n\right\}=\left\{3(2)^n\right\}$
+}
+\bigbreak \noindent
+
+Given that $s_n = 3(2)^2$, we can use the formula
+
+$$r= \frac{s_n}{s_{n-1}}$$
+\vspace{3mm}
+
+So,
+
+$$ r = \frac{3\left(2^n\right)}{3\left(2^{n-1}\right)} = 2^{n - (n-1)}$$
+
+Therefore,
+
+$$ s_1 = 6 \hspace{6mm} r = 2$$
+\pagebreak
+\ex{Find the ninth term of the geometric sequence and find a recursive formula for the sequence}{
+	\vspace{3mm}
+
+	$3,2,\frac{4}{3}, \frac{8}{9}$
+}
+\bigbreak \noindent
+
+Given that $s_1 = 3$ we need to find $r$,
+
+$$ r = \frac{s_n}{s_{n-1}} = \frac{2}{3} = r$$ 
+
+Now that we have $s_1$ and $r$, we can use the formula 
+
+$$s_n = s_1(r)^{n-1}$$
+
+So, 
+
+$$a_9 = 3\left(\frac{2}{3}\right)^8$$
+\vspace{3mm}
+
+Recursive formula
+
+$$a_n = r \cdot a_{n-1}$$
+
+So,
+
+$$a_n = \frac{2}{3} \cdot a_{n-1}$$
+\bigbreak \noindent \bigbreak \noindent \bigbreak \noindent
+\begin{large}
+Sum of $n$ Terms of a Geometric Sequence
+\end{large}
+\bigbreak \noindent
+Let $\{a_n\}$ be a geometric sequence with first term $a$ and common ratio $r$, where $r \neq 0, r \neq 1$. The sum $s_n$ of the first terms of $\{a_ n\}$ is
+
+$$S_n=a \cdot \frac{1-r^n}{1-r}, r \neq 0,1$$
+\bigbreak \noindent
+\ex{Find the sum of the first $n$ terms of the sequence}{
+	\vspace{3mm}
+
+	$\{3^n\}$
+}
+$$ r = \frac{3^n}{3^{n-1}}$$
+$$ r = 3^{n-(n-1)} = 3$$
+
+$$ r = 3 \hspace{6mm} s_1 = 3$$
+
+So by using the formula
+
+$$
+s_n=\frac{a_1\left(1-r^n\right)}{(1-r)}
+$$
+
+$$\frac{3(1-3^n)}{-2} = \boxed{-\frac{3}{2}\left(1-3^n\right)}$$
+
+\pagebreak
+\noindent \begin{large}
+	\textbf{Determine Whether a Geometric Series Converges or Diverges} 
+\end{large}
+\bigbreak \noindent
+\thmcon{
+	\textbf{\underline{Defintion}}
+	\vspace{3mm}
+
+	An infinite sum of the form
+$$
+a+a r+a r^2+\cdots+a r^{n-1}+
+$$
+with the first term a and a common ratio $r$, is called an infinite geometric series and is denoted by
+$$
+\sum_{k=1}^{\infty} a r^{k-1}
+$$
+\bigbreak \noindent \bigbreak \noindent
+	{\textbf{Sum of an Infinite Geometric Series}}
+	\vspace{4mm}
+
+	If $|r|<1$, the sum of the infinite geometric series $\sum_{k=1}^{\infty} a r^{k-1}$ is
+$$
+\sum_{k=1}^{\infty} a r^{k-1}=\frac{a}{1-r}
+$$
+}
+\bigbreak \noindent \bigbreak \noindent
+\ex{Find the sum of the geometric series}{
+	\vspace{3mm}
+
+	$1+\frac{1}{3}+\frac{1}{9}+\ldots$
+}
+$$ a = 1 \hspace{10mm} r = \frac{\frac{1}{3}}{1} = \frac{1}{3}$$
+
+Using the formula
+
+$$\frac{a}{1-r}$$
+
+$$\frac{1}{1-\frac{1}{3}}$$
+\vspace{.5mm}
+
+So,
+
+$$\text{sum}= \frac{3}{2}$$
+\bigbreak \noindent \bigbreak \noindent
+\ex{Find the fraction representation of the repeating decimal}{
+	\vspace{3mm}
+
+	$0.8888\ldots$
+}
+$$
+0.8+0.08+0.008+\cdots
+$$
+So,
+
+$$
+r = \frac{0.08}{0.8}=0.1
+$$
+
+$$ s_1 = 0.8 \hspace{6mm} r = 0.1$$
+$$= \frac{8}{9}$$
+\pagebreak
+
+\end{document}
