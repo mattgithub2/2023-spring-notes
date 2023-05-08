@@ -797,6 +797,274 @@ No, By definition of Theorem 8.2, any tree with ten vertices has nine edges, not
 \begin{large}
 	\textbf{\subsection{Rooted Trees}}
 \end{large}
+\bigbreak \noindent
+\thmcon{
+	\textbf{\underline{Defintion}}
+	\vspace{3mm}
+
+	In mathematics, a rooted tree is a tree in which one vertex has been distinguished from the others and is designed the \textit{root}. Given any other vertex $v$ in the tree, there is a unique path from the root to $v$.
+	\vspace{5mm}
+
+	The number of edges in such a path is called the level of $v$, and the \textit{height} of the tree is the length of the longest such path. It is traditional in drawing rooted trees to place the root at the top and show the branches descending from it.
+	\bigbreak \noindent
+	A \textbf{rooted tree} is a tree in which there is one vertex that is distinguished from the others and is called the \textbf{root}.
+	\vspace{2mm}
+
+	The \textbf{level} of a vertex is the number of edges along the unique path between it and the root. 
+	\vspace{2.5mm}
+
+	The \textbf{height} of a rooted tree is the maximum level of any vertex of the tree. Given the root or any internal vertex $v$ of a rooted tree, the \textbf{children} of $v$ are all those vertices that are adjacent to $v$ and are one level farther away from the root than $v$. 
+	\vspace{3mm}
+
+	If $w$ is a child of $v$, then $v$ is called the \textbf{parent} of $w$, and two distinct vertices that are both children of the same parent are called \textbf{siblings}. Given two distinct vertices $v$ and $w$, if $v$ lies on the unique path between $w$ and the root, then $v$ is an \textbf{ancestor} of $w$ and $w$ is a \textbf{descendant} of $v$.
+}
+\bigbreak \noindent
+{\centerline{{\large{These terms are illustrated in Figure {7}}}}}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.7\textwidth]{ rootedtree.png }
+\caption{Rooted Tree}
+\end{figure}
+\ex{}{
+	Consider the tree with root $v_0$ shown below.
+	\begin{enumerate}
+		\begin{multicols}{2}
+		\item What is the level of $v_5$? 
+		\item What is the level of $v_0$?
+		\end{multicols}
+		\begin{multicols}{2}
+		\item what is the height of this rooted tree?
+		\item What are the children of $v_3$
+		\end{multicols}
+		\begin{multicols}{2}
+		\item What is the parent of $v_2$
+		\item what are the siblings of $v_8$
+		\end{multicols}
+		\begin{multicols}{2}
+	\item What are the descendants of $v_3$?
+	\item How many terminal vertices are on the tree
+	\end{multicols}
+	\end{enumerate}
+}
+\pagebreak
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.4\textwidth]{ tree2.png }
+\end{figure}
+\pf{Solution}
+
+\begin{center}
+	The tree has a level of \textbf{2} since the number of edges from $v_0$ to $v_5$ is $2$. 
+	\vspace{2mm}
+
+	The level of $v_0$ is \textbf{0} since there are no edges between $v_0$ and itself.
+	\vspace{2mm}
+	
+	the height of this rooted tree is \textbf{3} since the maximum level of the tree is 3.
+	\vspace{2mm}
+
+	The children of $v_3$ are $v_5$ and $v_6$
+	\vspace{2mm}
+
+	the parent of $v_2$ is $v_0$
+	\vspace{2mm}
+
+	the siblings of $v_8$ are $v_7$ and $v_9$
+	\vspace{2mm}
+
+	The descendants of $v_3$ are $v_5$, $v_6$, and $v_10$
+	\vspace{2mm}
+
+	There are 6 leaves (terminal vertices) on this rooted tree.
+\end{center}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+	\textbf{\subsection{Binary Trees}} 
+\end{large}
+\thmcon{
+	\textbf{\underline{Defintion}}
+	\vspace{3mm}
+
+	When every vertex in a rooted tree has at most two children and each child is designated either the (unique) left child or the (unique) right child, the result is a binary tree.
+	\vspace{5mm}
+
+	A \textbf{binary tree} is a rooted tree in which every parent has at most two children. 
+	\vspace{3mm}
+
+	Each child in a binary tree is designated either a \textbf{left child} or a \textbf{right child} (but not both), and every parent has at most one left child and one right child. 
+	\vspace{3mm}
+
+	A \textbf{full binary tree} is a binary tree in which each parent has exactly two children.
+	\vspace{3mm}
+
+	Given any parent $v$ in a binary tree $T$, if $v$ has a left child, then the \textbf{left subtree} of $v$ is the binary tree whose root is the left child of $v$, whose vertices consist of the left child of $v$ and all its descendants, and whose edges consist of all those edges of $T$ that connect the vertices of the left subtree. The \textbf{right subtree} of $v$ is defined analogously.
+}
+\vspace{3mm}
+
+{\centerline{{\large{These terms are illustrated in Figure {8}}}}}
+\pagebreak
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.6\textwidth]{ binarytree.png }
+\caption{A Binary Tree}
+\end{figure}
+\bigbreak \noindent
+An interesting theorem about binary trees says that if you know the number of internal vertices of a full binary tree, then you can calculate both the total number of vertices and the number of leaves, and conversely. More specifically, a full binary tree with $k$ internal vertices has a total of $2 k+1$ vertices of which $k+1$ are leaves.
+\bigbreak \noindent
+\thm{}{If $k$ is a positive integer and $T$ is a full binary tree with $k$ internal vertices, then (1) $T$ has a total of $2 k+1$ vertices, and (2) $T$ has $k+1$ leaves.}
+\bigbreak \noindent \bigbreak \noindent
+\ex{Determining Whether a Certain Full binary Tree Exists}{
+	Is there a full binary tree that has 10 internal vertices and 13 terminal vertices?
+}
+\pf{Solution}
+
+No. By Theorem 8.3, a full binary tree with 10 internal vertices has 10 + 1 = 11 leaves, not 13.
+\bigbreak \noindent \bigbreak \noindent
+\thm{}{
+	for every integer $h \ge 0$, if $T$ is any binary tree with height $h$ and $t$ leaves, then
+	$$ t \le 2^{h}$$
+	Equivalently: $$log_2 t \le h$$
+}
+\bigbreak \noindent \bigbreak \noindent
+\ex{Determining whether a Certain Binary Tree Exists}{
+Is there a binary tree that has height 5 and 38 leaves?
+}
+\pf{Solution}
+
+
+No. By Theorem 8.4, a binary tree with height 5 and 38 leaves cannot exists because the height is greater 
+
+than $2^5$
+\pagebreak
+\nt{A full binary tree of height $h$ has $2^h$ leaves.}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+	\textbf{\subsection{Binary Search Trees}} 
+\end{large}
+\bigbreak \noindent
+\thmcon{
+	\textbf{\underline{Defintion}}
+	\vspace{3mm}
+
+	A binary search tree is a kind of binary tree in which data records, such as customer information, can be stored, searched, and processed very efficiently. To place records into a binary search tree, it must be possible to arrange them in a total order.
+	\vspace{4mm}
+
+	In case they do not have a natural total order of their own, an element of a totally ordered set, such as a number or a word and called a \textbf{key}, may be added to each record. The keys are inserted into the vertices of the tree and provide access to the records to which they are attached.
+	\vspace{5mm}
+
+	Once it is built, a binary search tree has the following property: 
+	\vspace{2mm}
+
+	for every internal vertex $v$, all the keys in the \textbf{left subtree} of $v$ are \textbf{less} than the key in $v$, and all the keys in the \textbf{right subtree} of $v$ are \textbf{greater} than the key in $v$.
+	\vspace{5mm}
+
+For example, check that the following is a binary search tree for the set of records with the following keys: $$15,10,19,25,12,4$$
+}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{ tree3.png }
+\caption{Binary Search Tree for the data listed above}
+\end{figure}
+\begin{mdframed}
+ \begin{large}
+	 \vspace{2mm}
+
+  To build a binary search tree, start by making a root and insert a key into it.
+  \vspace{5mm}
+
+\noindent To add a new key, compare it to the key at the root. If the new key is less than the key at the root, give the root a left child and insert the new key into it.
+\vspace{4mm}
+
+\noindent If the key is greater than the key at the root, give the root a right child and insert the new key into it.
+\vspace{4mm}
+
+\noindent So to add a key at a subsequent stage, work down the tree to find a place to put the new key, starting at the root and either moving left or right depending on whether the new key is less or greater than the key at the vertex to which it is currently being compared.t
+ \end{large} 
+
+\end{mdframed}
+\pagebreak
+\begin{figure}[ht]
+  \centering
+  \subfigure{\includegraphics[width=0.7\textwidth]{tree4.png}}
+  \hfill
+  \subfigure{\includegraphics[width=0.7\textwidth]{tree5.png}}
+  \caption{Binary search tree algorithm}
+\end{figure}
+\bigbreak \noindent \bigbreak \noindent
+\ex{Building a Binary search tree}{
+	Go through the steps to build a binary search tree for the keys $15,10,19,25,12,4$, and insert the keys in the order in which they are listed. For simplicity, use the same names for the vertices and their associated keys.
+}
+\pf{Solution}
+
+\textbf{Insert 15}: Make 15 the root.
+\vspace{3mm}
+
+\textbf{Insert 10}: Compare 10 to 15.
+\vspace{3mm}
+
+Since $10<15$ and 15 does not have a left child, make 10 the left child of 15 and add an edge joining 15 
+
+and 10.
+\vspace{3mm}
+
+\textbf{Insert 19}: Compare 19 to 15.
+\vspace{3mm}
+
+Since $19>15$ and 15 does not have a right child, make 19 the right child of 15 and add an edge joining 15 
+
+and 19.
+\vspace{3mm}
+
+\textbf{Insert 25}: Compare 25 to 15.
+\vspace{3mm}
+
+Since $25>15$ and 15 has a right child, namely 19, 
+\vspace{3mm}
+
+compare 25 to 19.
+\vspace{3mm}
+
+Since $25>19$ and 19 does not have a right child, make 25 the right child of 19 and add an edge joining 19 
+
+and 25.
+\vspace{3mm}
+
+\textbf{Insert 12}: Compare 12 to 15.
+Since $12<15$ and 15 has a left child, namely 10, 
+\vspace{3mm}
+
+compare 12 to 10 .
+Since $12>10$ and 10 does not have a right child, make 12 the right child of 10 and add 
+
+an edge joining 10 and 12.
+\vspace{3mm}
+
+\textbf{Insert 4}: Compare 4 to 15.
+\vspace{3mm}
+
+Since $4<15$ and 15 has a left child, namely 10,
+\vspace{3mm}
+
+compare 4 to 10.
+\vspace{3mm}
+
+Since $4<10$ and 10 does not have a left child, make 4 the left child of 10 and add an edge joining 10 and 
+
+4.
+\bigbreak \noindent
+\vspace{1.5mm}
+
+{\centerline{{\large{\textbf{The sequence of steps is shown in the following diagrams}}}}}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{ tree6.png }
+\caption{Steps for building the example tree}
+\end{figure}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+	\textbf{\subsection{Spanning Trees}}
+\end{large}
+
 
 
 
