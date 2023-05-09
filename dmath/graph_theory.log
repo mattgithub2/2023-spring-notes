@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.27)  8 MAY 2023 08:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.3.27)  9 MAY 2023 10:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1380,7 +1380,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 77
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<figure1.png, id=66, 338.76563pt x 173.89969pt>
+<figure1.png, id=70, 338.76563pt x 173.89969pt>
 File: figure1.png Graphic file (type png)
 <use figure1.png>
 Package pdftex.def Info: figure1.png  used on input line 122.
@@ -1392,18 +1392,18 @@ Package pdftex.def Info: figure1.png  used on input line 122.
 l.124 \newpage
               ]
 \g__tikzsymbols_savebox_F_0 g 0 G_10_Laughey_1_none_none_box=\box155
-<figure2.png, id=91, 140.02313pt x 107.65219pt>
+<figure2.png, id=99, 140.02313pt x 107.65219pt>
 File: figure2.png Graphic file (type png)
 <use figure2.png>
 Package pdftex.def Info: figure2.png  used on input line 169.
 (pdftex.def)             Requested size: 147.43204pt x 113.3535pt.
  [3]
-<figure3.png, id=110, 405.76593pt x 182.18062pt>
+<figure3.png, id=118, 405.76593pt x 182.18062pt>
 File: figure3.png Graphic file (type png)
 <use figure3.png>
 Package pdftex.def Info: figure3.png  used on input line 178.
 (pdftex.def)             Requested size: 245.71756pt x 110.32385pt.
-<figure4.png, id=115, 575.90157pt x 146.04562pt>
+<figure4.png, id=123, 575.90157pt x 146.04562pt>
 File: figure4.png Graphic file (type png)
 <use figure4.png>
 Package pdftex.def Info: figure4.png  used on input line 210.
@@ -1413,100 +1413,100 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 2
  (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<figure5.png, id=126, 372.64218pt x 124.96687pt>
+<figure5.png, id=134, 372.64218pt x 124.96687pt>
 File: figure5.png Graphic file (type png)
 <use figure5.png>
 Package pdftex.def Info: figure5.png  used on input line 240.
 (pdftex.def)             Requested size: 344.00308pt x 115.36754pt.
  [5 <./figure3.png> <./figure4.png>]
-<figure6.png, id=137, 304.13625pt x 168.63pt>
+<figure6.png, id=145, 304.13625pt x 168.63pt>
 File: figure6.png Graphic file (type png)
 <use figure6.png>
 Package pdftex.def Info: figure6.png  used on input line 277.
 (pdftex.def)             Requested size: 245.71756pt x 136.24217pt.
  [6 <./figure5.png>]
-<figure7.png, id=154, 400.49625pt x 168.63pt>
+<figure7.png, id=162, 400.49625pt x 168.63pt>
 File: figure7.png Graphic file (type png)
 <use figure7.png>
 Package pdftex.def Info: figure7.png  used on input line 310.
 (pdftex.def)             Requested size: 245.71756pt x 103.46109pt.
-<figure8.png, id=155, 338.76563pt x 109.1578pt>
+<figure8.png, id=163, 338.76563pt x 109.1578pt>
 File: figure8.png Graphic file (type png)
 <use figure8.png>
 Package pdftex.def Info: figure8.png  used on input line 316.
 (pdftex.def)             Requested size: 245.71756pt x 79.17818pt.
  [7 <./figure6.png>]
-<figure9.png, id=166, 328.22626pt x 152.82094pt>
+<figure9.png, id=174, 328.22626pt x 152.82094pt>
 File: figure9.png Graphic file (type png)
 <use figure9.png>
 Package pdftex.def Info: figure9.png  used on input line 406.
 (pdftex.def)             Requested size: 270.29082pt x 125.84795pt.
  [8 <./figure7.png> <./figure8.png>]
-<figure10.png, id=176, 368.1253pt x 222.07968pt>
+<figure10.png, id=184, 368.1253pt x 222.07968pt>
 File: figure10.png Graphic file (type png)
 <use figure10.png>
 Package pdftex.def Info: figure10.png  used on input line 456.
 (pdftex.def)             Requested size: 245.71756pt x 148.24025pt.
  [9 <./figure9.png>]
-<figure11.png, id=188, 490.83376pt x 177.66376pt>
+<figure11.png, id=197, 490.83376pt x 177.66376pt>
 File: figure11.png Graphic file (type png)
 <use figure11.png>
 Package pdftex.def Info: figure11.png  used on input line 469.
 (pdftex.def)             Requested size: 344.00308pt x 124.52101pt.
  [10 <./figure10.png>] [11 <./figure11.png>]
-<figure13.png, id=213, 422.32782pt x 165.61874pt>
+<figure13.png, id=221, 422.32782pt x 165.61874pt>
 File: figure13.png Graphic file (type png)
 <use figure13.png>
 Package pdftex.def Info: figure13.png  used on input line 665.
 (pdftex.def)             Requested size: 294.86407pt x 115.63664pt.
  [12]
-<figure14.png, id=223, 417.05812pt x 177.66376pt>
+<figure14.png, id=231, 417.05812pt x 177.66376pt>
 File: figure14.png Graphic file (type png)
 <use figure14.png>
 Package pdftex.def Info: figure14.png  used on input line 682.
 (pdftex.def)             Requested size: 344.00308pt x 146.55pt.
-<figure15.png, id=224, 494.59781pt x 121.95563pt>
+<figure15.png, id=232, 494.59781pt x 121.95563pt>
 File: figure15.png Graphic file (type png)
 <use figure15.png>
 Package pdftex.def Info: figure15.png  used on input line 706.
 (pdftex.def)             Requested size: 294.86407pt x 72.70497pt.
-<figure16.png, id=225, 492.33937pt x 127.22531pt>
+<figure16.png, id=233, 492.33937pt x 127.22531pt>
 File: figure16.png Graphic file (type png)
 <use figure16.png>
 Package pdftex.def Info: figure16.png  used on input line 712.
 (pdftex.def)             Requested size: 270.29082pt x 69.84795pt.
  [13 <./figure13.png>]
-<figure17.png, id=234, 457.71pt x 255.95625pt>
+<figure17.png, id=242, 457.71pt x 255.95625pt>
 File: figure17.png Graphic file (type png)
 <use figure17.png>
 Package pdftex.def Info: figure17.png  used on input line 726.
 (pdftex.def)             Requested size: 294.86407pt x 164.89717pt.
  [14 <./figure14.png> <./figure15.png> <./figure16.png>]
-<tree1.png, id=246, 511.9125pt x 141.52875pt>
+<tree1.png, id=254, 511.9125pt x 141.52875pt>
 File: tree1.png Graphic file (type png)
 <use tree1.png>
 Package pdftex.def Info: tree1.png  used on input line 779.
 (pdftex.def)             Requested size: 314.51817pt x 86.95435pt.
  [15 <./figure17.png>]
-<rootedtree.png, id=254, 528.47438pt x 290.58563pt>
+<rootedtree.png, id=262, 528.47438pt x 290.58563pt>
 File: rootedtree.png Graphic file (type png)
 <use rootedtree.png>
 Package pdftex.def Info: rootedtree.png  used on input line 825.
 (pdftex.def)             Requested size: 344.00308pt x 189.15332pt.
  [16 <./tree1.png>]
-<tree2.png, id=265, 194.97844pt x 191.21437pt>
+<tree2.png, id=273, 194.97844pt x 191.21437pt>
 File: tree2.png Graphic file (type png)
 <use tree2.png>
 Package pdftex.def Info: tree2.png  used on input line 852.
 (pdftex.def)             Requested size: 196.57104pt x 192.78362pt.
  [17 <./rootedtree.png>]
-<binarytree.png, id=281, 495.35063pt x 268.75406pt>
+<binarytree.png, id=289, 495.35063pt x 268.75406pt>
 File: binarytree.png Graphic file (type png)
 <use binarytree.png>
 Package pdftex.def Info: binarytree.png  used on input line 908.
 (pdftex.def)             Requested size: 294.86407pt x 159.9783pt.
  [18 <./tree2.png>]
-<tree3.png, id=292, 255.95625pt x 125.71968pt>
+<tree3.png, id=300, 255.95625pt x 125.71968pt>
 File: tree3.png Graphic file (type png)
 <use tree3.png>
 Package pdftex.def Info: tree3.png  used on input line 965.
@@ -1515,36 +1515,126 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 969.
  [19 <./binarytree.png>]
-<tree4.png, id=304, 473.51906pt x 288.3272pt>
+<tree4.png, id=312, 473.51906pt x 288.3272pt>
 File: tree4.png Graphic file (type png)
 <use tree4.png>
 Package pdftex.def Info: tree4.png  used on input line 988.
 (pdftex.def)             Requested size: 344.00308pt x 209.4696pt.
-<tree5.png, id=305, 551.05875pt x 253.69781pt>
+<tree5.png, id=313, 551.05875pt x 253.69781pt>
 File: tree5.png Graphic file (type png)
 <use tree5.png>
 Package pdftex.def Info: tree5.png  used on input line 990.
 (pdftex.def)             Requested size: 344.00308pt x 158.3788pt.
  [20 <./tree3.png>]
-<tree6.png, id=312, 392.21532pt x 162.6075pt>
+<tree6.png, id=320, 392.21532pt x 162.6075pt>
 File: tree6.png Graphic file (type png)
 <use tree6.png>
 Package pdftex.def Info: tree6.png  used on input line 1060.
 (pdftex.def)             Requested size: 245.71756pt x 101.87259pt.
- [21 <./tree4.png> <./tree5.png>] [22 <./tree6.png>] (./graph_theory.aux) ) 
+ [21 <./tree4.png> <./tree5.png>]
+<spanningtree.png, id=331, 240.14719pt x 160.34906pt>
+File: spanningtree.png Graphic file (type png)
+<use spanningtree.png>
+Package pdftex.def Info: spanningtree.png  used on input line 1088.
+(pdftex.def)             Requested size: 245.71756pt x 164.07013pt.
+<treesolution.png, id=332, 553.31718pt x 146.79843pt>
+File: treesolution.png Graphic file (type png)
+<use treesolution.png>
+Package pdftex.def Info: treesolution.png  used on input line 1097.
+(pdftex.def)             Requested size: 294.86407pt x 78.22838pt.
+<minspan.png, id=333, 296.60812pt x 228.10219pt>
+File: minspan.png Graphic file (type png)
+<use minspan.png>
+Package pdftex.def Info: minspan.png  used on input line 1107.
+(pdftex.def)             Requested size: 206.40186pt x 158.73764pt.
+ [22 <./tree6.png>]
+<annotated.png, id=344, 280.79906pt x 222.8325pt>
+File: annotated.png Graphic file (type png)
+<use annotated.png>
+Package pdftex.def Info: annotated.png  used on input line 1115.
+(pdftex.def)             Requested size: 196.57104pt x 155.99188pt.
+ [23 <./spanningtree.png> <./treesolution.png> <./minspan.png>]
+<algo.png, id=360, 520.94624pt x 332.74312pt>
+File: algo.png Graphic file (type png)
+<use algo.png>
+Package pdftex.def Info: algo.png  used on input line 1157.
+(pdftex.def)             Requested size: 245.71756pt x 156.94777pt.
+File: annotated.png Graphic file (type png)
+<use annotated.png>
+Package pdftex.def Info: annotated.png  used on input line 1166.
+(pdftex.def)             Requested size: 221.1443pt x 175.49171pt.
+ [24 <./annotated.png>]
+<kru.png, id=367, 336.50719pt x 243.91125pt>
+File: kru.png Graphic file (type png)
+<use kru.png>
+Package pdftex.def Info: kru.png  used on input line 1191.
+(pdftex.def)             Requested size: 245.71756pt x 178.10582pt.
+ [25 <./algo.png>]
+File: algo.png Graphic file (type png)
+<use algo.png>
+Package pdftex.def Info: algo.png  used on input line 1213.
+(pdftex.def)             Requested size: 294.86407pt x 188.34038pt.
+<prim.png, id=381, 274.77657pt x 217.5628pt>
+File: prim.png Graphic file (type png)
+<use prim.png>
+Package pdftex.def Info: prim.png  used on input line 1221.
+(pdftex.def)             Requested size: 245.71756pt x 194.55981pt.
+ [26 <./kru.png>]
+<algo3.png, id=392, 599.23875pt x 317.68687pt>
+File: algo3.png Graphic file (type png)
+<use algo3.png>
+Package pdftex.def Info: algo3.png  used on input line 1264.
+(pdftex.def)             Requested size: 294.86407pt x 156.32718pt.
+ [27 <./prim.png>]
+<algo3.5.png, id=401, 453.94594pt x 383.93437pt>
+File: algo3.5.png Graphic file (type png)
+<use algo3.5.png>
+Package pdftex.def Info: algo3.5.png  used on input line 1270.
+(pdftex.def)             Requested size: 294.86407pt x 249.39034pt.
+<graph20.png, id=402, 323.70938pt x 149.05687pt>
+File: graph20.png Graphic file (type png)
+<use graph20.png>
+Package pdftex.def Info: graph20.png  used on input line 1278.
+(pdftex.def)             Requested size: 245.71756pt x 113.14565pt.
+<step1.png, id=403, 553.31718pt x 236.38312pt>
+File: step1.png Graphic file (type png)
+<use step1.png>
+Package pdftex.def Info: step1.png  used on input line 1285.
+(pdftex.def)             Requested size: 206.40186pt x 88.17455pt.
+<step2.png, id=404, 550.30594pt x 264.23718pt>
+File: step2.png Graphic file (type png)
+<use step2.png>
+Package pdftex.def Info: step2.png  used on input line 1289.
+(pdftex.def)             Requested size: 196.57104pt x 94.38747pt.
+<step3.png, id=405, 557.83406pt x 326.72063pt>
+File: step3.png Graphic file (type png)
+<use step3.png>
+Package pdftex.def Info: step3.png  used on input line 1297.
+(pdftex.def)             Requested size: 206.40186pt x 120.88474pt.
+<step4.png, id=406, 557.83406pt x 323.70938pt>
+File: step4.png Graphic file (type png)
+<use step4.png>
+Package pdftex.def Info: step4.png  used on input line 1301.
+(pdftex.def)             Requested size: 196.57104pt x 114.06558pt.
+<step5.png, id=407, 554.82281pt x 325.96782pt>
+File: step5.png Graphic file (type png)
+<use step5.png>
+Package pdftex.def Info: step5.png  used on input line 1305.
+(pdftex.def)             Requested size: 245.71756pt x 144.36136pt.
+ [28 <./algo3.png>] [29 <./algo3.5.png> <./graph20.png> <./step1.png> <./step2.png>] [30 <./step3.png> <./step4.png> <./step5.png>] (./graph_theory.aux) ) 
 Here is how much of TeX's memory you used:
- 47570 strings out of 478287
- 1103337 string characters out of 5849289
+ 47760 strings out of 478287
+ 1106429 string characters out of 5849289
  1590130 words of memory out of 5000000
- 64812 multiletter control sequences out of 15000+600000
+ 64953 multiletter control sequences out of 15000+600000
  535497 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  81i,14n,99p,766b,1703s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on graph_theory.pdf (22 pages, 974786 bytes).
+Output written on graph_theory.pdf (30 pages, 1904075 bytes).
 PDF statistics:
- 486 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
- 112 named destinations out of 1000 (max. 500000)
- 473 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 611 PDF objects out of 1000 (max. 8388607)
+ 421 compressed objects within 5 object streams
+ 146 named destinations out of 1000 (max. 500000)
+ 616 words of extra memory for PDF output out of 10000 (max. 10000000)
 

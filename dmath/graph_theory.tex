@@ -1064,12 +1064,247 @@ Since $4<10$ and 10 does not have a left child, make 4 the left child of 10 and 
 \begin{large}
 	\textbf{\subsection{Spanning Trees}}
 \end{large}
+\bigbreak \noindent
+\thmcon{
+	\textbf{\underline{Defintion}}
+	\vspace{3mm}
 
+	A \textbf{Spanning Tree} for a graph $G$ is a subgraph of $G$ that contains every vertex of $G$ and is a tree.
+}
+\bigbreak \noindent \bigbreak \noindent
+\mprop{}{
+	\begin{enumerate}
+		\item Every connected graph has a spanning tree. 
+		\item Any two spanning trees for a graph have the same number of edges
+	\end{enumerate}
+}
+\bigbreak \noindent \bigbreak \noindent
+\pagebreak
+\ex{}{
+	Find all spanning trees for the graph $G$ pictured below.
+}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{ spanningtree.png }
+\end{figure}
+\pf{Solution}
 
+The Graph has one circuit ($V_2,V_1,V_4,V_2$), and removing any edge of the circuit gives a tree. Thus, as show 
 
+below, there are three spanning trees for $G$.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.6\textwidth]{ treesolution.png }
+\end{figure}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+	\textbf{\subsection{Minimum Spanning Trees}} 
+\end{large}
+\bigbreak \noindent
+The Graph of the routes allowed by the U.S Federal Aviation Authority shown in \textbf{figure {12}} can be annotated by adding the distance (in miles) between each pair of cites.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.42\textwidth]{ minspan.png }
+\caption{}
+\end{figure}
+\pagebreak
 
+Thus,
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.4\textwidth]{ annotated.png }
+\caption{}{Graph with distances}
+\end{figure}
+\bigbreak \noindent
+Now suppose the airline company wants to serve all the cities shown, but with a route system that minimized the total mileage of the system as a whole.
+\bigbreak \noindent
+\nt{
+	Note that such a system is a tree, because if the system contained a circuit, removal of an edge from the circuit would not affect a person's ability to reach every city in the system from every other, but it would reduce the total mileage of the system.
+}
+\bigbreak \noindent
+More generally, a graph whose edges are labeled with numbers (known as weights) is called a weighted graph. A minimum-weight spanning tree, or simply a minimum spanning tree, is a spanning tree for which the sum of the weights of all the edges is as small as possible.
+\bigbreak \noindent \bigbreak \noindent
+\thmcon{
+	\textbf{\underline{Defintion}}
+	\vspace{3mm}
+	
+	A \textbf{weighted graph} is a graph for which each edge has an associated positive real number \textbf{weight}. The sum of the weights of all the edges is the \textbf{total weight} of the graph
+	\vspace{3mm}
+	
+	A \textbf{minimum spanning tree} for a connected, weighted graph is a spanning tree that has the least possible weight compared to all other spanning trees for the graph.
+	\bigbreak \noindent
+	If $G$ is a weighted graph and $e$ is an edge of $G$, then $w(e)$ denotes the weight of $e$ and \textbf{$w(G)$} denotes the total weight of $G$
+}
 
+\pagebreak
+\begin{large}
+	\textbf{\subsection{Kruskal's Algorithm}} 
+\end{large}
+\bigbreak \noindent
+\thmcon{
+	\textbf{\underline{Defintion}}
+	\vspace{3mm}
 
+	In Kruskal's algorithm, the edges of a connected, weighted graph are examined one by one in order of increasing weight. At each stage the edge being examined is added to what will become the minimum spanning tree, provided that this addition does not create a circuit.
+	\vspace{6mm}
+
+	After $n-1$ edges have been added (where $n$ is the number of vertices of the graph), these edges, together with the vertices of the graph, form a minimum spanning tree for the graph.
+}
+\vspace{3mm}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{ algo.png}
+\caption{}{Kruskal's Algorithm}
+\end{figure}
+\bigbreak \noindent \bigbreak \noindent
+\ex{Actions of Kruskal's Algorithm}{
+	Describe the action of Kruskal's algorithm on the graph shown in the figure below, where $n=8$
+}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.45\textwidth]{ annotated.png }
+\end{figure}
+\pagebreak
+\pf{Solution}
+
+\begin{center}
+$ \begin{array}{|c|l|r|l|}
+\hline \text { Iteration Number } & \multicolumn{1}{|c|}{\text { Edge Considered }} & \text { Weight } & \text { Action Taken } \\
+\hline 1 & \text { Chicago-Milwaukee } & 74 & \text { added } \\
+2 & \text { Louisville-Cincinnati } & 83 & \text { added } \\
+3 & \text { Louisville-Nashville } & 151 & \text { added } \\
+4 & \text { Cincinnati-Detroit } & 230 & \text { added } \\
+5 & \text { St. Louis-Louisville } & 242 & \text { added } \\
+6 & \text { St. Louis-Chicago } & 262 & \text { added } \\
+7 & \text { Chicago-Louisville } & 269 & \text { not added } \\
+8 & \text { Louisville-Detroit } & 306 & \text { not added } \\
+9 & \text { Louisville-Milwaukee } & 348 & \text { not added } \\
+10 & \text { Minneapolis-Chicago } & 355 & \text { added } \\
+\hline
+\end{array}$
+\end{center}
+\bigbreak \noindent \bigbreak \noindent
+The tree produced by Kruskal's algorithm is shown in the figure below
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{ kru.png }
+\caption{}
+\end{figure}
+\nt{
+	When a connected, weighted graph is input to Kruskal's algorithm, the output is a minimum spanning tree.
+}
+\begin{large}
+	\textbf{\subsection{Prim's Algorithm}} 
+\end{large}
+\bigbreak \noindent
+\thmcon{
+	\textbf{\underline{Defintion}}
+	\vspace{3mm}
+
+Prim's algorithm works differently from Kruskal's. It builds a minimum spanning tree $T$ by expanding outward in connected links from some vertex. One edge and one vertex are added at each stage.
+\vspace{5mm}	
+
+The edge added is the one of least weight that connects the vertices already in $T$ with those not in $T$, and the vertex is the endpoint of this edge that is not already in $T$.
+}
+\pagebreak
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.6\textwidth]{ algo.png }
+\end{figure}
+\bigbreak \noindent
+\ex{Action of Prim's Algorithm}{
+	Describe the action of Prim's algorithm for the graph in Figure {} using the Minneapolis vertex as a starting point.
+}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{ prim.png }
+\caption{Prims Algorithm}
+\end{figure}
+\nt{The black lines shown in the figure create the minimum spanning tree.}
+\pagebreak
+\begin{center}
+	\textbf{Steps for figure 16} 
+	\vspace{3mm}
+
+$\begin{array}{|c|l|l|r|}
+\hline \text { Iteration Number } & \text { Vertex Added } & \multicolumn{1}{|c|}{\text { Edge Added }} & \text { Weight } \\
+\hline 0 & \text { Minneapolis } & & \\
+1 & \text { Chicago } & \text { Minneapolis-Chicago } & 355 \\
+2 & \text { Milwaukee } & \text { Chicago-Milwaukee } & 74 \\
+3 & \text { St. Louis } & \text { Chicago-St. Louis } & 262 \\
+4 & \text { Louisville } & \text { St. Louis-Louisville } & 242 \\
+5 & \text { Cincinnati } & \text { Louisville-Cincinnati } & 83 \\
+6 & \text { Nashville } & \text { Louisville-Nashville } & 151 \\
+7 & \text { Detroit } & \text { Cincinnati-Detroit } & 230 \\
+\hline
+\end{array}$
+\end{center}
+\bigbreak \noindent \bigbreak \noindent
+\begin{large}
+	\textbf{\subsection{Dijkstra's Shortest Path Algorithm}}
+\end{large}
+\bigbreak \noindent
+\thmcon{
+	\textbf{\underline{Defintion}}
+	\vspace{3mm}
+
+	Although the trees produced by Kruskal's and Prim's algorithms have the least possible total weight compared to all other spanning trees for the given graph, they do not always reveal the shortest distance between any two points on the graph.
+	\bigbreak \noindent
+	In 1959 the computing pioneer, Edsger Dijkstra developed an algorithm to find the shortest path between a starting vertex and an ending vertex in a weighted graph in which all the weights are positive.
+	\bigbreak \noindent
+	It is somewhat similar to Prim's algorithm in that it works outward from a starting vertex $a$, adding vertices and edges one by one to construct a tree $T$.
+	\bigbreak \noindent
+	However, it differs from Prim's algorithm in the way it chooses the next vertex to add, ensuring that for each added vertex $v$, the length of the shortest path from a to $v$ has been identified.
+}
+\vspace{2mm}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.6\textwidth]{ algo3.png }
+\caption{Dijkstra's Shortest Path Algorithm (1)}
+\end{figure}
+\pagebreak
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.6\textwidth]{ algo3.5.png}
+\caption{Dijkstra's Shortest Path Algorithm (2)}
+\end{figure}
+\ex{Actions of Dijkstra's Algorithm}{
+	Show the steps in the execution of Dijktra's shortest path algorithm for the graph shown below with starting vertex $a$ and ending vertex $z$
+}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{ graph20.png }
+\end{figure}
+\bigbreak \noindent
+\begin{figure}[ht]
+\centering
+\begin{minipage}{.42\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{step1.png}
+\end{minipage}\hfill
+\begin{minipage}{.4\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{step2.png}
+\end{minipage}
+\end{figure}
+\pagebreak
+\begin{figure}[ht]
+\centering
+\begin{minipage}{.42\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{step3.png}
+\end{minipage}\hfill
+\begin{minipage}{.4\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{step4.png}
+\end{minipage}
+\end{figure}
+\begin{figure}[ht]
+\includegraphics[width=0.5\textwidth]{ step5.png }
+\end{figure}
 \end{document}
+
 
 
